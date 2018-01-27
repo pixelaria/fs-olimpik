@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Футбольная школа Олимпик</title>
-  <link rel="stylesheet" href="./css/libs.min.css"
->  <link rel="stylesheet" href="./css/bundle.css">
+  <link rel="stylesheet" href="./css/libs.min.css">
+  <link rel="stylesheet" href="./css/bundle.css">
 </head>
 <body class="body">
   <div class="strip">
@@ -31,7 +31,7 @@
             <li class="nav__item"><a href="#" class="nav__link">Цены</a></li>
             <li class="nav__item"><a href="#" class="nav__link">Отзывы</a></li>
             <li class="nav__item"><a href="#" class="nav__link">Адреса</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">Франшиза</a></li>
+            <li class="nav__item"><a href="#" class="nav__link nav__link--red">Франшиза</a></li>
           </ul>
         </div>
         
@@ -40,7 +40,31 @@
   </header>
   <section class="section section--page" style="height: 500px;">
     <div class="container">
-      <h1 class="page__title">Футбольная школа для детей от 3-х лет</h1>
+      <div class="page row">
+        <div class="col-lg-4">
+          <h1 class="page__title">Футбольная школа <br>для детей <br>от 3-х лет</h1>
+          <form action="#" class="form">
+            <input type="text" class="form__input" placeholder="введите ваш телефон">
+            <a href="#" class="form__btn btn btn--red">запиcаться сейчас - Бесплатно!</a>
+            <p class="form__info">запишитесь прямо сейчас на первое бесплатное ознакомительное занятие</p>
+          </form>
+
+        </div>
+        <div class="col-lg-8">
+          <div class="parallax parallax-viewport" style="overflow: unset">
+            <div class="parallax__item parallax__item--grass parallax-layer">
+              <img src="./img/bg-grass.png" alt="" class="img">
+            </div>
+            <div class="parallax__item parallax__item--boy parallax-layer">
+              <img src="./img/bg-boy.png" alt="" class="img">
+            </div>
+            <div class="parallax__item parallax__item--ball parallax-layer">
+              <img src="./img/bg-ball.png" alt="" class="img">
+            </div>
+          </div>
+        </div>
+      </div>
+      
     </div>
   </section>
   <section class="section">
@@ -49,7 +73,7 @@
       <div class="keys">
         <div class="keys__item key">
           <div class="key__img">
-            <div class="key__bg"></div>
+            <img src="./img/boy-4-full.png" alt="" class="img img--responsive">
           </div>
           <div class="key__desc">
             <p class="key__title">Новых друзей.</p>
@@ -58,7 +82,7 @@
         </div>
         <div class="keys__item key">
           <div class="key__img">
-            <div class="key__bg"></div>
+            <img src="./img/boy-4-full.png" alt="" class="img img--responsive">
           </div>
           <div class="key__desc">
             <p class="key__title">Радость и веселье.</p>
@@ -67,7 +91,7 @@
         </div>        
         <div class="keys__item key">
           <div class="key__img">
-            <div class="key__bg"></div>
+            <img src="./img/boy-4-full.png" alt="" class="img img--responsive">
           </div>
           <div class="key__desc">
             <p class="key__title">Крепкое здоровье.</p>
@@ -76,7 +100,7 @@
         </div>        
         <div class="keys__item key">
           <div class="key__img">
-            <div class="key__bg"></div>
+            <img src="./img/boy-4-full.png" alt="" class="img img--responsive">
           </div>
           <div class="key__desc">
             <p class="key__title">Уверенность в себе.</p>
@@ -84,7 +108,7 @@
           </div>
         </div>        
       </div>
-      <a href="#" class="btn btn--white">Записаться на открытый урок</a>
+      <a href="#" class="btn btn--white pull--right">Записаться на открытый урок</a>
     </div>
   </section>
   <section class="section">
@@ -128,9 +152,9 @@
       </div>
     </div>
   </section>
-  <section class="section section--photos">
+  <section class="section section--photos" style="height: 600px;">
     <div class="container">
-      <h2 class="page__title page__title--цршеу">Фотографии с занятий</h2>
+      <h2 class="section__title section__title--white">Фотографии с занятий</h2>
     </div>
   </section>
   <section class="section">
@@ -307,5 +331,8 @@
       <div class="footer__item footer__item--info"></div>
     </div>
   </footer>
+
+  <script type="text/javascript" src="./js/libs.min.js"></script>
+  <script type="text/javascript" src="./js/bundle.js"></script>
 </body>
 </html>
