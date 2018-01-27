@@ -6,13 +6,22 @@
   <link rel="stylesheet" href="./css/libs.min.css"
 >  <link rel="stylesheet" href="./css/bundle.css">
 </head>
-<body>
+<body class="body">
   <div class="strip">
-    <div class="container"></div>
+    <div class="container">
+      <div class="strip__item">
+        <a href="tel:88001007374" class="link">8-800-100-73-74</a>
+      </div>
+      <div class="strip__item">
+        <a href="#" class="btn btn--br">Заказать звонок</a>
+      </div>
+    </div>
   </div>
   <header class="header">
-    <div class="container">
-      <a class="header__item header__item--logo" title="Футбольная школа Олимпик" href="/"></a>
+    <div class="header__container container">
+      <a class="header__item header__item--logo" title="Футбольная школа Олимпик" href="/">
+        <img src="./img/logo-header.png" alt="" class="img img--responsive">
+      </a>
       <nav class="header__item header__item--nav">
         <div class="nav">
           <ul class="nav__list">
@@ -29,14 +38,14 @@
       </nav>
     </div>
   </header>
-  <section class="section section--page">
+  <section class="section section--page" style="height: 500px;">
     <div class="container">
       <h1 class="page__title">Футбольная школа для детей от 3-х лет</h1>
     </div>
   </section>
   <section class="section">
     <div class="container">
-      <h2 class="section__title section__title--right">ЧТО МЫ МОЖЕМ ДАТЬ РЕБЁНКУ?</h2>
+      <h2 class="section__title section__title--white section__title--right">ЧТО МЫ МОЖЕМ ДАТЬ РЕБЁНКУ?</h2>
       <div class="keys">
         <div class="keys__item key">
           <div class="key__img">
@@ -47,6 +56,33 @@
             <p class="key__text">Дети проводят вместе много времени, и даже молчаливые ребята вынуждены общаться друг с другом в процессе игры.</p>
           </div>
         </div>
+        <div class="keys__item key">
+          <div class="key__img">
+            <div class="key__bg"></div>
+          </div>
+          <div class="key__desc">
+            <p class="key__title">Радость и веселье.</p>
+            <p class="key__text">Футбол — это подвижная командная игра, полная положительных эмоций.</p>
+          </div>
+        </div>        
+        <div class="keys__item key">
+          <div class="key__img">
+            <div class="key__bg"></div>
+          </div>
+          <div class="key__desc">
+            <p class="key__title">Крепкое здоровье.</p>
+            <p class="key__text">Тренировки укрепляют иммунитет, развивают мышцы и дыхательную систему.</p>
+          </div>
+        </div>        
+        <div class="keys__item key">
+          <div class="key__img">
+            <div class="key__bg"></div>
+          </div>
+          <div class="key__desc">
+            <p class="key__title">Уверенность в себе.</p>
+            <p class="key__text">Спорт развивает характер, учит ребенка дисциплине и повышает самооценку.</p>
+          </div>
+        </div>        
       </div>
       <a href="#" class="btn btn--white">Записаться на открытый урок</a>
     </div>
@@ -60,7 +96,7 @@
   </section>
   <section class="section">
     <div class="container">
-      <h2 class="section__title">Наши команды</h2>
+      <h2 class="section__title section__title--white">Наши команды</h2>
       <div class="info">
         <div class="info__item">
           <div class="info__img">
@@ -76,7 +112,7 @@
             <img src="./img/commands-2.png" alt="" class="img img--responsive">
           </div>
           <div class="info__desc">
-            <p class="info__title">5-6 года</p>
+            <p class="info__title">5-6 лет</p>
             <p class="info__text">В методику обучения положена начальная тренировка техники. Ребятам объясняют правила игры, роль каждого игрока на поле, учат обращаться с мячом: ведению, передачам, ударам по воротам. Проводятся упражнения на выносливость, гибкость и координацию.</p>
           </div>
         </div>
@@ -85,16 +121,16 @@
             <img src="./img/commands-3.png" alt="" class="img img--responsive">
           </div>
           <div class="info__desc">
-            <p class="info__title">7-8 года</p>
+            <p class="info__title">7-8 лет</p>
             <p class="info__text">Юные, но уже самые настоящие футболисты. В программу обучения заложена не только физическая, но и тактическая подготовка: определение действий соперников и отработка быстрого принятия решения. Физические упражнения для получения крепкой пятёрки по физкультуре.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <section class="section">
+  <section class="section section--photos">
     <div class="container">
-      <h2 class="page__title">Фотографии с занятий</h2>
+      <h2 class="page__title page__title--цршеу">Фотографии с занятий</h2>
     </div>
   </section>
   <section class="section">
@@ -174,9 +210,9 @@
       </div>
     </div>
   </section>
-  <div class="section section">
+  <section class="section">
     <div class="container">
-      <h2 class="section__title">Часто задаваемые вопросы</h2>
+      <h2 class="section__title section__title--white">Часто задаваемые вопросы</h2>
       <div class="faq">
         <div class="faq__item">
           <p class="faq__title">КАК ОБЕСПЕЧИВАЕТСЯ БЕЗОПАСНОСТЬ ВО ВРЕМЯ ЗАНЯТИЙ?</p>
@@ -213,6 +249,63 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
+  <secton class="section">
+    <div class="container">
+      <h2 class="section__title section__title--right">Отзывы родителей</h2>
+      <div class="reviews">
+        <div class="review">
+          <div class="review__photo">
+            <img src="" alt="" class="img img--responsive">
+          </div>
+          <div class="review__desc"></div>
+        </div>
+      </div>      
+    </div>
+  </secton>
+  <section class="section section--map">
+    <div class="container">
+      <h2 class="section__title section__title--white">Наши филиалы</h2>
+      <div class="mapblock">
+        <div class="mapblock__map"></div>
+        <div class="mapblock__info">
+          <div class="select">
+            <input class="select__input" name="city" value="не определился" type="hidden">
+            <div class="select__placeholder">выберите город</div>
+            <div class="select__inner">
+              <div class="select__item" data-text="Санкт-Петербург" data-value="Санкт-Петербург">Санкт-Петербург</div>
+              <div class="select__item" data-text="Москва" data-value="Москва">Москва</div>
+            </div>
+          </div>
+          <div class="select">
+            <input class="select__input" name="city" value="не определился" type="hidden">
+            <div class="select__placeholder">выберите филиал</div>
+            <div class="select__inner">
+              <div class="select__item">Не определился</div>
+              <div class="select__item" data-index="0">Выборгское шоссе, д. 132</div>
+              <div class="select__item" data-index="1">Приморский пр., д.50</div>
+              <div class="select__item" data-index="2">Уманский переулок 68 к.1</div>
+              <div class="select__item" data-index="3">Ул.Константина Заслонова, д.23,к.4</div>
+              <div class="select__item" data-index="4">Обуховской обороны, д.105</div>
+              <div class="select__item" data-index="5">Пр. Стачек д. 45 к.2</div>
+              <div class="select__item" data-index="6">Софийская ул., д.14</div>
+              <div class="select__item" data-index="8">Пр. Металлистов., д. 51</div>
+              <div class="select__item" data-index="9">Михаила Дудина, д.21А</div>
+            </div>
+          </div>
+          <input type="text" class="input" placeholder="введите ваше имя" name="name">
+          <input type="text" class="input" placeholder="введите ваш номер телефона" name="phone">
+          <a href="#" class="btn btn--red">Записаться</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer__container container">
+      <div class="footer__item footer__item--logo"></div>
+      <div class="footer__item footer__item--btn"></div>
+      <div class="footer__item footer__item--info"></div>
+    </div>
+  </footer>
 </body>
 </html>
