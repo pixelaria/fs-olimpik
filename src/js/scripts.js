@@ -115,5 +115,29 @@ $(function (){
     select.find('.select__placeholder').html(text);
     return false;
   });
+  
+
+  var mySwiper = new Swiper('.swiper-container', {
+    effect: 'coverflow',
+    loop: true,
+    centeredSlides: true,
+    slidesPerView: 3,
+    initialSlide: 0,
+    
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    coverflowEffect: {
+      rotate: 0,
+      slideShadows: true,
+      stretch: -70,
+      depth: 250
+    },
+  });
+
   console.log('init');
+
+
+
 });
