@@ -117,7 +117,7 @@ $(function (){
   });
   
 
-  var mySwiper = new Swiper('.swiper-container', {
+  var swiper_photos = new Swiper('.swiper--photos', {
     effect: 'coverflow',
     loop: true,
     centeredSlides: true,
@@ -125,14 +125,23 @@ $(function (){
     initialSlide: 0,
     
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.swiper--photos .swiper-button-next',
+      prevEl: '.swiper--photos .swiper-button-prev',
     },
     coverflowEffect: {
       rotate: 0,
       slideShadows: true,
       stretch: -70,
       depth: 250
+    },
+  });
+
+  var swiper = new Swiper('.swiper--reviews', {
+    spaceBetween: 60,
+    pagination: {
+      el: '.swiper--reviews .swiper-pagination',
+      nextEl: '.swiper--reviews .swiper-button-next',
+      prevEl: '.swiper--reviews .swiper-button-prev',
     },
   });
 
