@@ -97,7 +97,7 @@ $(function (){
   console.log('init');
 
   $('.parallax-layer img').parallax({
-    mouseport: $("body")
+    mouseport: $("body"),
   });
 
   $(document).on('click','.select', function(e){
