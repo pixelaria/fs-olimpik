@@ -43,7 +43,7 @@
       <div class="page row">
         <div class="col-lg-4">
           <h1 class="page__title">Футбольная школа <br>для детей <br>от 3-х лет</h1>
-          <form action="#" class="form">
+          <form action="#" class="form form--top">
             <input type="text" class="form__input" placeholder="введите ваш телефон">
             <a href="#" class="form__btn btn btn--red">запиcаться сейчас - Бесплатно!</a>
             <p class="form__info">запишитесь прямо сейчас на первое бесплатное ознакомительное занятие</p>
@@ -159,7 +159,7 @@
   </section>
   <section class="section">
     <div class="container">
-      <h2 class="page__title page__title--right page__title--black">ЧЕМ ГОРДИТСЯ ШКОЛА ОЛИМПИК</h2>
+      <h2 class="section__title section__title--right section__title--black">ЧЕМ ГОРДИТСЯ ШКОЛА ОЛИМПИК</h2>
       <div class="prouds">
         <div class="prouds__item">
           <div class="prouds__img">
@@ -274,15 +274,38 @@
       </div>
     </div>
   </section>
+  <section class="section">
+    <div class="container">
+      <div class="promo">
+        <div class="promo__info">
+          <h2 class="promo__title">Стоимость абонемента на месяц от 4800 рублей</h2>
+          <p class="promo__text">Стоимость зависит от выбранного филиала, количества занятий в месяц и возраста ребенка.</p>
+        </div>
+        <a class="btn btn--black promo__btn">Уточнить стоимость</a>
+      </div>
+    </div>
+  </section>
   <secton class="section">
     <div class="container">
       <h2 class="section__title section__title--right">Отзывы родителей</h2>
       <div class="reviews">
         <div class="review">
           <div class="review__photo">
-            <img src="" alt="" class="img img--responsive">
+            <img src="./img/review-1.png" alt="Отзыв" class="img img--responsive">
           </div>
-          <div class="review__desc"></div>
+          <div class="review__desc">
+            <div class="review__text">Начали заниматься в начале августа в филиале на Приморском у тренера Романа. Начали с нуля, хотя 7 лет почти. Удачно, что попали в новую команду, а не давно сыгранную, легче было адаптироваться. На тренеровки ребёнок идёт с удовольствием, видно, что глаза горят. Это самое главное на данный момент. А дальше будем смотреть:)</div>
+            <div class="review__info">
+              <div class="review__stars">
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+              </div>
+              <div class="review__author">Наталья Федотова <a href="">(Вконтакте)</a></div>
+            </div>
+          </div>
         </div>
       </div>      
     </div>
@@ -290,49 +313,65 @@
   <section class="section section--map">
     <div class="container">
       <h2 class="section__title section__title--white">Наши филиалы</h2>
+    </div>
+    <div class="container container--map">
       <div class="mapblock">
-        <div class="mapblock__map"></div>
+        <div id="map" class="mapblock__map">
+        </div>
         <div class="mapblock__info">
-          <div class="select">
-            <input class="select__input" name="city" value="не определился" type="hidden">
-            <div class="select__placeholder">выберите город</div>
-            <div class="select__inner">
-              <div class="select__item" data-text="Санкт-Петербург" data-value="Санкт-Петербург">Санкт-Петербург</div>
-              <div class="select__item" data-text="Москва" data-value="Москва">Москва</div>
+          <div class="form form--map">
+            <p class="form__title">ОСТАВЬТЕ ВАШ ТЕЛЕФОН</p>
+            <p class="form__subtitle">и мы перезвоним, чтобы <br>договориться о записи</p>
+          
+            <div class="select">
+              <input class="select__input" name="city" value="не определился" type="hidden">
+              <div class="select__placeholder">выберите город</div>
+              <div class="select__inner">
+                <div class="select__item" data-text="Санкт-Петербург" data-value="Санкт-Петербург">Санкт-Петербург</div>
+                <div class="select__item" data-text="Москва" data-value="Москва">Москва</div>
+              </div>
             </div>
-          </div>
-          <div class="select">
-            <input class="select__input" name="city" value="не определился" type="hidden">
-            <div class="select__placeholder">выберите филиал</div>
-            <div class="select__inner">
-              <div class="select__item">Не определился</div>
-              <div class="select__item" data-index="0">Выборгское шоссе, д. 132</div>
-              <div class="select__item" data-index="1">Приморский пр., д.50</div>
-              <div class="select__item" data-index="2">Уманский переулок 68 к.1</div>
-              <div class="select__item" data-index="3">Ул.Константина Заслонова, д.23,к.4</div>
-              <div class="select__item" data-index="4">Обуховской обороны, д.105</div>
-              <div class="select__item" data-index="5">Пр. Стачек д. 45 к.2</div>
-              <div class="select__item" data-index="6">Софийская ул., д.14</div>
-              <div class="select__item" data-index="8">Пр. Металлистов., д. 51</div>
-              <div class="select__item" data-index="9">Михаила Дудина, д.21А</div>
+            <div class="select">
+              <input class="select__input" name="city" value="не определился" type="hidden">
+              <div class="select__placeholder">выберите филиал</div>
+              <div class="select__inner">
+                <div class="select__item">Не определился</div>
+                <div class="select__item" data-index="0">Выборгское шоссе, д. 132</div>
+                <div class="select__item" data-index="1">Приморский пр., д.50</div>
+                <div class="select__item" data-index="2">Уманский переулок 68 к.1</div>
+                <div class="select__item" data-index="3">Ул.Константина Заслонова, д.23,к.4</div>
+                <div class="select__item" data-index="4">Обуховской обороны, д.105</div>
+                <div class="select__item" data-index="5">Пр. Стачек д. 45 к.2</div>
+                <div class="select__item" data-index="6">Софийская ул., д.14</div>
+                <div class="select__item" data-index="8">Пр. Металлистов., д. 51</div>
+                <div class="select__item" data-index="9">Михаила Дудина, д.21А</div>
+              </div>
             </div>
+            <input type="text" class="form__input" placeholder="введите ваше имя" name="name">
+            <input type="text" class="form__input" placeholder="введите ваш номер телефона" name="phone">
+            <a href="#" class="btn btn--form btn--red">Записаться</a>
           </div>
-          <input type="text" class="input" placeholder="введите ваше имя" name="name">
-          <input type="text" class="input" placeholder="введите ваш номер телефона" name="phone">
-          <a href="#" class="btn btn--red">Записаться</a>
         </div>
       </div>
     </div>
   </section>
   <footer class="footer">
     <div class="footer__container container">
-      <div class="footer__item footer__item--logo"></div>
-      <div class="footer__item footer__item--btn"></div>
-      <div class="footer__item footer__item--info"></div>
+      <div class="footer__item footer__item--logo">
+        <img src="./img/logo-footer.png" alt="" class="img img--responsive">
+        <span>Детская футбольная школа ОЛИМПИК</span>
+      </div>
+      <div class="footer__item footer__item--btn">
+        <a href="#" class="btn btn--br footer__btn">Остались вопросы?</a>
+      </div>
+      <div class="footer__item footer__item--info">
+        <a href="tel:88001007374" class="link link--white footer__tel">8-800-100-73-74</a>
+        <a href="#" class="link link--white footer__privacy">Политика конфиденциальноcти</a>
+      </div>
     </div>
   </footer>
-
   <script type="text/javascript" src="./js/libs.min.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBC_exc_scRvoGDPe2TvK6Lhqb2huiNgOk&callback=init_map"></script>
   <script type="text/javascript" src="./js/bundle.js"></script>
 </body>
 </html>
