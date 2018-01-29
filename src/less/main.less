@@ -23,13 +23,16 @@ p {
   margin:0;
 }
 
+h1,h2 {
+  margin-top: 0;
+}
 
 .body {
-  background:url('../img/bg-main-dust.png') 100% 100% repeat-y,  url('../img/bg-main.png') 100% 100% repeat-y ;
-  background-size: 100%;
-
-  background-position: 0 0;
-  background-size: cover;
+  background: url('../img/bg-main.png');
+  background-size: auto;
+  background-position: top center;
+  background-repeat: repeat-y;
+  
 }
 
 /* STRIP */
@@ -94,6 +97,7 @@ p {
   }
 
   &__link {
+    display: block;
     color:#ffffff;
     color: #ffffff;
     
@@ -104,18 +108,14 @@ p {
     text-transform: uppercase;
     text-decoration: none;
     
-    transition: color 0.3s ease;
-
+    transition: color 0.3s ease, transform 0.3s ease;
+  
     &:hover {
-      color: #e1002b;
+      transform: scale(1.15);
     }
 
     &--red {
       color: #e1002b;
-
-      &:hover {
-        color:#ffffff;
-      }
     }
   }
 }
@@ -135,15 +135,32 @@ p {
   }
 }
 .section {
-  
   &--page {
     padding-top: 80px;
   }
   &--map {
+    margin-top: 200px;
     padding-bottom: 30px;
     margin-bottom: -1px;
   }
 
+  &--promo {
+    margin-bottom: 100px;
+  }
+  
+  &--reviews {
+
+  }
+  &--photos {
+    .section__title {
+      margin-bottom: 80px;
+    }
+    margin-bottom: 200px;
+  }
+  
+  &--trainers {
+    margin-bottom: 200px;
+  }
   &__title {
     font-family: "Code-Pro";
     font-size: 45px;
@@ -197,7 +214,7 @@ p {
 }
 .img {
   &--responsive {
-    
+    width: 100%;
   }
 
   &--auto {
@@ -229,11 +246,23 @@ p {
   &--white {
     background-color: #ffffff;
     color: #00000a;
+    border-bottom: 2px solid #00000a;
+    
+    transition: border-color 0.3s ease;
+    &:hover {
+      border-bottom: 2px solid transparent;
+    }
   }
 
   &--red {
     background-color: #ff0000;
     color:#ffffff;
+    border-bottom: 2px solid #00000a;
+    
+    transition: border-color 0.3s ease;
+    &:hover {
+      border-bottom: 2px solid transparent;
+    }
   }
   
   &--black {
@@ -247,6 +276,11 @@ p {
     background-color: #ffffff;
     color: #00000a;
     text-transform: uppercase;
+    
+    transition: background-color 0.3s ease;
+    &:hover {
+      background-color: #CCCBCE;
+    }
   }
 
   &--form {
@@ -373,6 +407,7 @@ p {
 .info {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 130px;
   &__item {
     width: ~"calc(33.33% - 20px)";
   } 
@@ -461,9 +496,9 @@ p {
   }
 
   &__desc {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
-    line-height: 30px;
+    line-height: 28px;
   }
 }
 
@@ -900,4 +935,18 @@ p {
 
 .swiper-slide img {
   width: 100%;
+}
+
+.swiper--photos .swiper-button-prev {
+  background-image: url('../img/slider-left.png');
+  &:hover {
+    background-image: url('../img/slider-left-active.png');
+  }
+}
+
+.swiper--photos .swiper-button-next {
+  background-image: url('../img/slider-right.png');
+  &:hover {
+    background-image: url('../img/slider-right-active.png');
+  }
 }
