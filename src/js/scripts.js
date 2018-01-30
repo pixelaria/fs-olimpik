@@ -96,8 +96,36 @@ function init_map() {
 $(function (){
   console.log('init');
 
-  $('.parallax-layer img').parallax({
+  $('.section--page .parallax-layer').parallax({
     mouseport: $("body"),
+    
+    xorigin: 0,
+    yorigin: 0
+  },{xparallax: '15px'},{xparallax: '50px'},{xparallax: '100px'});
+
+
+  $('.info__item:nth-child(1) .parallax-layer').parallax({
+    mouseport: $(this).find('.info__item:nth-child(1) .info__img'),
+    xparallax: '15px',
+    yparallax: '15px',
+    xorigin: 0,
+    yorigin: 0
+  });
+
+  $('.info__item:nth-child(2) .parallax-layer').parallax({
+    mouseport: $(this).find('.info__item:nth-child(2) .info__img'),
+    xparallax: '15px',
+    yparallax: '15px',
+    xorigin: 0,
+    yorigin: 0
+  });
+
+  $('.info__item:nth-child(3) .parallax-layer').parallax({
+    mouseport: $(this).find('.info__item:nth-child(3) .info__img'),
+    xparallax: '15px',
+    yparallax: '15px',
+    xorigin: 0,
+    yorigin: 0
   });
 
   $(document).on('click','.select', function(e){
@@ -137,7 +165,7 @@ $(function (){
   });
 
   var swiper = new Swiper('.swiper--reviews', {
-    spaceBetween: 60,
+    spaceBetween: 120,
     pagination: {
       el: '.swiper--reviews .swiper-pagination',
       nextEl: '.swiper--reviews .swiper-button-next',
