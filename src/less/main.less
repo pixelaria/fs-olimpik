@@ -55,6 +55,10 @@ h1,h2 {
   background-color: #00000a;
   height: 70px;
 
+  @media @mobiles {
+    height: 40px;
+  }
+
   &__container {
     display: flex;
     flex-direction: row;
@@ -75,6 +79,13 @@ h1,h2 {
       img {
         position: absolute;
         top:-45px;
+        @media @mobiles {
+          top:-30px;
+        }
+      }
+
+      @media @mobiles {
+        width: 120px;
       }
 
     }
@@ -84,6 +95,9 @@ h1,h2 {
 /* NAV */
 
 .nav {
+  @media @mobiles {
+    display: none;
+  }
   &__list {
 
   }
@@ -125,6 +139,10 @@ h1,h2 {
 .container {
   padding: 0;
   
+  @media @mobiles {
+    padding:0 15px;
+  }
+
   &--map {
     width: 100%;
   }
@@ -137,6 +155,9 @@ h1,h2 {
 .section {
   &--page {
     padding-top: 80px;
+    @media @mobiles {
+      padding-top: 50px;
+    }
   }
   &--map {
     margin-top: 200px;
@@ -170,6 +191,18 @@ h1,h2 {
     
     margin-bottom: 30px;
 
+    @media @mobiles {
+      font-size: 20px;
+      line-height: 25px;
+      font-weight: 400;
+      text-transform: uppercase;
+      text-align: center !important;
+      padding:0 15%;
+
+      margin-bottom: 20px;
+
+    }
+    
     &--white {
       color:#ffffff;
     }
@@ -195,6 +228,10 @@ h1,h2 {
     font-weight: 400;
     text-transform: uppercase;
     margin-bottom: 20px;
+
+    @media @mobiles {
+      font-size: 31px;
+    }
   }
 }
 
@@ -300,6 +337,12 @@ h1,h2 {
 
     margin-bottom: 0;
   }
+
+  @media @mobiles {
+    &.pull-right {
+      float: none;
+    }
+  }
 }
 
 /* Sections */
@@ -316,12 +359,25 @@ h1,h2 {
     &:last-child {
       margin-right: 0;
     }
+
+    @media @mobiles {
+      width: 50%;
+      margin-bottom: 30px;
+    }
+  }
+
+  @media @mobiles {
+    flex-wrap: wrap;
   }
 }
 
 
 .key {
   color: #00000a;
+
+  @media @mobiles {
+    padding: 0 5px;
+  }
   &__img {
     margin-bottom: 15px;
     text-align: center;
@@ -330,12 +386,22 @@ h1,h2 {
     font-size: 26px;
     font-weight: 700;
     margin-bottom: 5px;
+    
+
+    @media @mobiles {
+      font-size: 13px;
+      line-height: 15px;
+    }
   }
 
   &__desc {
     font-size: 20px;
     font-weight: 400;
     line-height: 30px;
+
+    @media @mobiles {
+      font-size: 12px;
+    }
   }
 
   &__text {
@@ -344,6 +410,11 @@ h1,h2 {
     font-size: 18px;
     text-align: left;
     word-wrap: break-word;
+
+    @media @mobiles {
+      font-size: 12px;
+      line-height: 18px;
+    }
   }
 }
 
@@ -365,6 +436,11 @@ h1,h2 {
   background-size: contain;
   background-repeat: no-repeat;
 
+
+  @media @mobiles {
+    height: 110px;
+    padding: 30px 0 40px 0;
+  }
   &__text {
     position: relative;
 
@@ -381,6 +457,14 @@ h1,h2 {
     font-weight: 400;
     text-transform: uppercase;
     text-align: center;
+    
+    @media @mobiles {
+      display: flex;  
+      align-items: center;
+      font-size: 10px;
+      height: 45px;
+      padding: 0 10px;
+    }
 
     &:before, &:after {
       content: '';
@@ -392,16 +476,28 @@ h1,h2 {
       background-position: center;
       background-size: contain;
       background-repeat: no-repeat;
+
+      @media @mobiles {
+        height: 52px;
+        width: 18px;
+        top:-3px;
+      }
     }
 
     &:before {
       background-image: url('../img/bg-scroll-left.png');
       left: -29px;
+      @media @mobiles {
+        left: -17px;
+      }
     }
 
     &:after {
       background-image: url('../img/bg-scroll-right.png');
       right: -29px;
+      @media @mobiles {
+        right: -17px;
+      }
     }
   }
 }
@@ -410,8 +506,17 @@ h1,h2 {
   display: flex;
   justify-content: space-between;
   margin-bottom: 130px;
+  
+  @media @mobiles {
+    display:block;
+  }
+  
   &__item {
     width: ~"calc(33.33% - 20px)";
+    @media @mobiles {
+      width: 100%;
+      margin-bottom: 35px;
+    }
   } 
 
   &__img {
@@ -432,6 +537,17 @@ h1,h2 {
         //transform: scale(1.1);
       }
     }
+
+    @media @mobiles {
+      width: 250px;
+      height: 250px;
+
+      left: 0;
+      right: 0;
+      margin: auto;
+
+      margin-bottom: 15px;
+    }
   }
 
   &__desc {
@@ -441,6 +557,12 @@ h1,h2 {
   &__title {
     font-size: 34px;
     font-weight: 700;
+
+    @media @mobiles {
+      font-size: 20px;
+      text-align: center;
+      margin-bottom: 10px;
+    }
   }
 
   &__text {
@@ -449,6 +571,11 @@ h1,h2 {
     font-size: 18px;
     text-align: left;
     word-wrap: break-word;
+
+    @media @mobiles {
+      font-size: 12px;
+      line-height: 18px;
+    }
   }
 
 }
@@ -460,13 +587,26 @@ h1,h2 {
 
   &__item {
     width: ~"calc(33.33% - 15px)";
-
     margin-bottom: 60px;
+
+    @media @mobiles {
+      width: 49%;
+      margin-bottom: 30px;
+    }
   }
 
   &__img {
     text-align: center;
     margin-bottom: 30px;
+
+    @media @mobiles {
+      margin-bottom: 15px;
+      padding: 0 25px;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
   }
 
   &__desc {
@@ -478,13 +618,23 @@ h1,h2 {
   &__title {
     font-size: 34px;
     font-weight: 700;
+    @media @mobiles {
+      font-size: 14px;
+      line-height: 21px;
+    }
   }
+
   &__text {
     font-weight: 400;
     line-height: 27px;
     font-size: 18px;
     text-align: left;
     word-wrap: break-word;
+    @media @mobiles {
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: -1px;
+    }
   }
 }
 
@@ -495,12 +645,21 @@ h1,h2 {
   justify-content: space-between;
   margin-bottom: 60px;
 
+  @media @mobiles {
+    display: block;
+  }
   &__item {
     color: #00000a;
     background-color: #ffffff;
     padding:30px;
     width: ~"calc(50% - 15px)";
     margin-bottom: 30px;
+
+    @media @mobiles {
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 10px;
+    }
   }
 
   &__title {
@@ -510,12 +669,22 @@ h1,h2 {
     border-bottom: 1px solid #ff0000;
     margin-bottom: 15px;
     padding-bottom: 15px;
+
+    @media @mobiles {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
   }
 
   &__desc {
     font-size: 18px;
     font-weight: 400;
     line-height: 28px;
+
+    @media @mobiles {
+      font-size: 12px;
+      line-height: 15px;
+    }
   }
 }
 
@@ -832,6 +1001,8 @@ h1,h2 {
     font-size: 30px;
     font-weight: 400;
     line-height: 30px;
+  
+  
 
     &--trainers {
       background-image: url('../img/bg-trainers.png');
@@ -840,6 +1011,17 @@ h1,h2 {
       background-size: contain;
       padding-bottom: 120px;
 
+      @media @mobiles {
+        padding-bottom: 50px;
+      }
+    
+    }
+
+
+    @media @mobiles {
+      font-size: 12px;
+      line-height: 16px;
+      padding-right: 15%;
     }
   }
 }
@@ -865,6 +1047,11 @@ h1,h2 {
   display: flex;
   flex-direction: row;
   position: relative;
+  
+
+  @media @mobiles {
+    display: block;
+  }
 
   &__photo {
     width: 400px;
@@ -873,6 +1060,12 @@ h1,h2 {
     img {
       width: 100%;
       height: auto;
+    }
+
+    @media @mobiles {
+      width: 100%;
+      height: auto;
+      margin-bottom: 20px;
     }
   }
 
@@ -886,6 +1079,13 @@ h1,h2 {
     font-weight: 400;
     line-height: 28px;
     padding-bottom: 50px;
+
+    @media @mobiles {
+      font-size: 12px;
+      line-height: 18px;
+      width: 100%;
+      margin: 0;
+    }
   }
 
   &__info {
@@ -929,6 +1129,11 @@ h1,h2 {
     text-align: left;
     display: flex;
     margin-bottom: 80px;
+
+    @media @mobiles {
+      display: block;
+      margin-bottom: 15px;
+    }
   }
   &__title { 
     width: 49%;
@@ -938,6 +1143,12 @@ h1,h2 {
     text-transform: uppercase;
     letter-spacing: -0.9px;
     margin:0;
+
+    @media @mobiles {
+      width: 100%;
+      font-size: 23px;
+      text-align: center;
+    }
   }
 
   &__text {
@@ -948,6 +1159,13 @@ h1,h2 {
     font-weight: 400;
     line-height: 30px;
     letter-spacing: -0.6px;
+
+    @media @mobiles {
+      width: 100%;
+      text-align: center;
+      font-size: 15px;
+      line-height: 22px;
+    }
   }
 
   &__btn {
@@ -959,6 +1177,13 @@ h1,h2 {
     text-transform: uppercase;
     letter-spacing: -1px;
     padding: 20px 25px;
+
+    @media @mobiles {
+      height: 47px;
+      font-size: 22px;
+      padding: 3px 20px;
+
+    }
   }
 }
 
@@ -999,7 +1224,9 @@ h1,h2 {
   }
 
   &__prev, &__next {
-    
+    @media @mobiles {
+      display: none;
+    }
 
   }
 
@@ -1025,6 +1252,11 @@ h1,h2 {
 .swiper--reviews {
   padding: 0 80px 50px 80px;
   margin: 0 -25px;
+
+  @media @mobiles {
+    padding: 0;
+    margin: 0;
+  }
   &:before {
     content: '';
     position: absolute;
