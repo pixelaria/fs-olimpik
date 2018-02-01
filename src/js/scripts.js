@@ -166,10 +166,14 @@ $(function (){
 
   var swiper = new Swiper('.swiper--reviews', {
     spaceBetween: 120,
-    pagination: {
-      el: '.swiper--reviews .swiper-pagination',
+    navigation: {
       nextEl: '.swiper--reviews .swiper-button-next',
       prevEl: '.swiper--reviews .swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper--reviews .swiper-pagination',
+      type: 'bullets',
+      clickable: true
     },
   });
 
