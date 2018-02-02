@@ -212,4 +212,17 @@ $(function (){
     return false;
   });
 
+  $(window).scroll(function(){
+    var header = $('.header'),
+        main = $('.main'),
+        scroll = $(window).scrollTop();
+  if (scroll >= 250) {
+      header.addClass('header--fixed');
+      main.addClass('main--fixed');
+    } else {
+      header.removeClass('header--fixed');
+      main.removeClass('main--fixed');
+    }
+  });
+
 });
