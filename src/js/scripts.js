@@ -162,6 +162,15 @@ $(function (){
       stretch: -70,
       depth: 250
     },
+    breakpoints: {
+      // when window width is <= 640px
+      640: {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        stretch:-150,
+        depth:50
+      }
+    }
   });
 
   var swiper = new Swiper('.swiper--reviews', {

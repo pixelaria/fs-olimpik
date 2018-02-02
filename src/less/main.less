@@ -145,6 +145,9 @@ h1,h2 {
 
   &--map {
     width: 100%;
+    @media @mobiles {
+      padding:0;
+    }
   }
   &:after {
     display: block;
@@ -167,6 +170,9 @@ h1,h2 {
 
   &--promo {
     margin-bottom: 65px;
+    @media @mobiles {
+      margin-bottom: 30px;
+    }
   }
   
   &--reviews {
@@ -181,6 +187,10 @@ h1,h2 {
   
   &--trainers {
     margin-bottom: 120px;
+
+    @media @mobiles {
+      margin-bottom: 30px;
+    }
   }
   &__title {
     font-family: "Code-Pro";
@@ -593,6 +603,12 @@ h1,h2 {
       width: 49%;
       margin-bottom: 30px;
     }
+
+    &--single {
+      @media @mobiles {
+        width: 100%;
+      }
+    }
   }
 
   &__img {
@@ -716,6 +732,10 @@ h1,h2 {
 
     &:after, &:before {
       content: none !important;
+    }
+
+    @media @mobiles {
+      display: block;
     }
   }
 
@@ -1030,14 +1050,25 @@ h1,h2 {
   
   display: flex;
   flex-direction: row;
+
+  @media @mobiles {
+    display: block;
+  }
   &__map {
     height: 575px;
     width: 70%;
+
+    @media @mobiles {
+      width: 100%;
+    }
   }
 
   &__info {
     width: 30%;
-
+    
+    @media @mobiles {
+      width: 100%;
+    }
   }
 
 
@@ -1179,6 +1210,7 @@ h1,h2 {
     padding: 20px 25px;
 
     @media @mobiles {
+      width: 100%;
       height: 47px;
       font-size: 22px;
       padding: 3px 20px;
