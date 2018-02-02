@@ -147,10 +147,10 @@ $(function (){
 
   var swiper_photos = new Swiper('.swiper--photos', {
     effect: 'coverflow',
-    loop: true,
+    loop: false,
     centeredSlides: true,
     slidesPerView: 3,
-    initialSlide: 0,
+    initialSlide: 1,
     
     navigation: {
       nextEl: '.swiper--photos .swiper-button-next',
@@ -179,6 +179,28 @@ $(function (){
 
   console.log('init');
 
+  var flexslider = $('.flexslider').flexslider({
+    animation: "slide",
+    controlNav: "thumbnails"
+  });
 
+  // Переносим навигацию для верной пагинации
+  let $container = $('.flex-viewport');
+  $container.append($('.flex-direction-nav'));
+
+
+  $(document).on('click','.swiper--photos .swiper-slide', function(e){
+    $('body').addClass('noscroll');
+    $('.overlay').addClass('overlay--active');
+    var index = swiper_photos.activeIndex;
+    flexslider.flexslider(index);
+    return false;
+  });
+
+  $(document).on('click','.overlay__close', function(e){
+    $('body').removeClass('noscroll');
+    $('.overlay').removeClass('overlay--active');
+    return false;
+  });
 
 });
