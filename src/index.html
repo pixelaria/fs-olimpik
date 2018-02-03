@@ -7,13 +7,99 @@
   <link rel="stylesheet" href="./css/bundle.css">
 </head>
 <body class="body">
+
+<section class="overlay" id="callback">
+  <div class="form form--popup">
+    <div class="overlay__close overlay__close--form"></div>
+    <div class="form__title">ОСТАВЬТЕ ВАШ ТЕЛЕФОН</div>
+    <div class="form__subtitle">и мы перезвоним ВАМ в самое ближайшее время</div>
+    <div class="form__fields">
+      <input type="text" class="form__input" placeholder="введите ваше имя">
+      <input type="text" class="form__input" placeholder="введите ваш телефон">
+      <a href="#" class="btn btn--form btn--red">Заказать звонок</a>
+    </div>
+  </div>
+</section>
+
+<section class="overlay" id="lesson">
+  <div class="form form--popup">
+    <div class="overlay__close overlay__close--form"></div>
+    <div class="form__title">Записаться <br> на открытый урок</div>
+    <div class="form__fields">
+      <div class="select">
+        <input class="select__input" name="city" value="не определился" type="hidden">
+        <div class="select__placeholder">выберите город</div>
+        <div class="select__inner">
+          <div class="select__item" data-text="Санкт-Петербург" data-value="Санкт-Петербург">Санкт-Петербург</div>
+          <div class="select__item" data-text="Москва" data-value="Москва">Москва</div>
+        </div>
+      </div>
+      <div class="select">
+        <input class="select__input" name="city" value="не определился" type="hidden">
+        <div class="select__placeholder">выберите филиал</div>
+        <div class="select__inner">
+          <div class="select__item">Не определился</div>
+          <div class="select__item" data-index="0">Выборгское шоссе, д. 132</div>
+          <div class="select__item" data-index="1">Приморский пр., д.50</div>
+          <div class="select__item" data-index="2">Уманский переулок 68 к.1</div>
+          <div class="select__item" data-index="3">Ул.Константина Заслонова, д.23,к.4</div>
+          <div class="select__item" data-index="4">Обуховской обороны, д.105</div>
+          <div class="select__item" data-index="5">Пр. Стачек д. 45 к.2</div>
+          <div class="select__item" data-index="6">Софийская ул., д.14</div>
+          <div class="select__item" data-index="8">Пр. Металлистов., д. 51</div>
+          <div class="select__item" data-index="9">Михаила Дудина, д.21А</div>
+        </div>
+      </div>
+      <input type="text" class="form__input" placeholder="введите ваше имя">
+      <input type="text" class="form__input" placeholder="введите ваш телефон">
+      <a href="#" class="btn btn--form btn--red">Записаться</a>
+    </div>
+  </div>
+</section>
+
+<section class="overlay" id="price">
+  <div class="form form--popup">
+    <div class="overlay__close overlay__close--form"></div>
+    <div class="form__title">Уточнить <br> стоимость</div>
+    <div class="form__fields">
+      <div class="select">
+        <input class="select__input" name="city" value="не определился" type="hidden">
+        <div class="select__placeholder">выберите город</div>
+        <div class="select__inner">
+          <div class="select__item" data-text="Санкт-Петербург" data-value="Санкт-Петербург">Санкт-Петербург</div>
+          <div class="select__item" data-text="Москва" data-value="Москва">Москва</div>
+        </div>
+      </div>
+      <div class="select">
+        <input class="select__input" name="city" value="не определился" type="hidden">
+        <div class="select__placeholder">выберите филиал</div>
+        <div class="select__inner">
+          <div class="select__item">Не определился</div>
+          <div class="select__item" data-index="0">Выборгское шоссе, д. 132</div>
+          <div class="select__item" data-index="1">Приморский пр., д.50</div>
+          <div class="select__item" data-index="2">Уманский переулок 68 к.1</div>
+          <div class="select__item" data-index="3">Ул.Константина Заслонова, д.23,к.4</div>
+          <div class="select__item" data-index="4">Обуховской обороны, д.105</div>
+          <div class="select__item" data-index="5">Пр. Стачек д. 45 к.2</div>
+          <div class="select__item" data-index="6">Софийская ул., д.14</div>
+          <div class="select__item" data-index="8">Пр. Металлистов., д. 51</div>
+          <div class="select__item" data-index="9">Михаила Дудина, д.21А</div>
+        </div>
+      </div>
+      <input type="text" class="form__input" placeholder="введите ваше имя">
+      <input type="text" class="form__input" placeholder="введите ваш телефон">
+      <a href="#" class="btn btn--form btn--red">Узнать цену</a>
+    </div>
+  </div>
+</section>
+
 <div class="strip">
-  <div class="container">
+  <div class="container strip__container">
     <div class="strip__item">
-      <a href="tel:88001007374" class="link">8-800-100-73-74</a>
+      <a href="tel:88001007374" class="link strip__link">8-800-100-73-74</a>
     </div>
     <div class="strip__item">
-      <a href="#" class="btn btn--br">Заказать звонок</a>
+      <a href="#" class="btn btn--br strip__btn">Заказать звонок</a>
     </div>
   </div>
 </div>
@@ -23,18 +109,21 @@
       <img src="./img/logo-header.png" alt="" class="img img--responsive">
       <img src="./img/logo-footer.png" alt="" class="img img--responsive img--fixed">
     </a>
-    <nav class="header__item header__item--nav">
-      <div class="nav">
-        <ul class="nav__list">
-          <li class="nav__item"><a href="#" class="nav__link">О школе</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Фото</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Наши тренеры</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Цены</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Отзывы</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Адреса</a></li>
-          <li class="nav__item"><a href="#" class="nav__link nav__link--red">Франшиза</a></li>
-        </ul>
-      </div>
+    <div class="navbar-toggler" data-target="nav">
+      <span class="navbar-toggler__bar"></span>
+      <span class="navbar-toggler__bar"></span>
+      <span class="navbar-toggler__bar"></span>
+    </div>
+    <nav id="nav" class="header__item header__item--nav nav">
+      <ul class="nav__list">
+        <li class="nav__item"><a href="#" class="nav__link">О школе</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Фото</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Наши тренеры</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Цены</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Отзывы</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Адреса</a></li>
+        <li class="nav__item"><a href="#" class="nav__link nav__link--red">Франшиза</a></li>
+      </ul>
     </nav>
     <div class="header__item header__item--phone">
       <a href="tel:88001007374" class="link link--white">8-800-100-73-74</a>
@@ -45,16 +134,9 @@
   <section class="section section--page">
     <div class="container">
       <div class="page row">
-        <div class="col-lg-4">
-          <h1 class="page__title">Футбольная школа <br>для детей <br>от 3-х лет</h1>
-          <form action="#" class="form form--top">
-            <input type="text" class="form__input" placeholder="введите ваш телефон">
-            <a href="#" class="form__btn btn btn--red">запиcаться сейчас - Бесплатно!</a>
-            <p class="form__info">запишитесь прямо сейчас на первое бесплатное ознакомительное занятие</p>
-          </form>
-
-        </div>
-        <div class="col-lg-8">
+        <h1 class="page__title col-lg-4">Футбольная школа <br>для детей <br>от 3-х лет</h1>
+        
+        <div class="page__parallax col-lg-8">
           <div class="parallax parallax-viewport" style="overflow: unset">
             <div class="parallax__item parallax__item--grass parallax-layer">
               <img src="./img/bg-grass.png" alt="" class="img">
@@ -65,10 +147,16 @@
             <div class="parallax__item parallax__item--ball parallax-layer">
               <img src="./img/bg-ball.png" alt="" class="img">
             </div>
-          </div>
+          </div>          
+        </div>
+        <div class="page__form col-lg-4">
+          <form action="#" class="form form--top">
+            <input type="text" class="form__input" placeholder="введите ваш телефон">
+            <a href="#" class="form__btn btn btn--red">запиcаться сейчас - Бесплатно!</a>
+            <p class="form__info">запишитесь прямо сейчас на первое бесплатное ознакомительное занятие</p>
+          </form>
         </div>
       </div>
-      
     </div>
   </section>
   <section class="section section--what">
@@ -115,7 +203,7 @@
       <a href="#" class="btn btn--white pull--right">Записаться на открытый урок</a>
     </div>
   </section>
-  <section class="section">
+  <section class="section section--roll">
     <div class="container">
       <div class="roll">
         <div class="roll__text">Внимательно следим за маленькими футболистами и ежемесячно даём родителям отчет о прогрессе в развитии</div>
@@ -186,7 +274,7 @@
       </div>
     </div>
   </section>
-  <section class="section">
+  <section class="section section--prouds">
     <div class="container">
       <h2 class="section__title section__title--right section__title--black">ЧЕМ ГОРДИТСЯ ШКОЛА ОЛИМПИК</h2>
       <div class="prouds">
@@ -253,7 +341,7 @@
 
 
 
-  <section class="section">
+  <section class="section section--students">
     <div class="container">
       <h2 class="section__title section__title--center">Наши Воспитанники</h2>
       <div class="prouds">
@@ -301,7 +389,7 @@
       </div>
     </div>
   </section>
-  <section class="section">
+  <section class="section section--faq">
     <div class="container">
       <h2 class="section__title section__title--white">Часто задаваемые вопросы</h2>
       <div class="faq">
@@ -352,7 +440,7 @@
       </div>
     </div>
   </section>
-  <secton class="section section--reviews">
+  <section class="section section--reviews">
     <div class="container">
       <h2 class="section__title section__title--right">Отзывы родителей</h2>
       <div class="swiper--reviews swiper-container">
@@ -419,7 +507,7 @@
         <div class="swiper-pagination reviews__pagination"></div>
       </div>
     </div>
-  </secton>
+  </section>
   <section class="section section--map">
     <div class="container">
       <h2 class="section__title section__title--white">Наши филиалы</h2>

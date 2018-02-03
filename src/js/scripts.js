@@ -145,6 +145,12 @@ $(function (){
   });
   
 
+  $('.navbar-toggler').click(function(e){
+    var target = $(this).data('target');
+    $('#'+target).toggleClass('nav--active');
+  });
+
+
   var swiper_photos = new Swiper('.swiper--photos', {
     effect: 'coverflow',
     loop: false,
