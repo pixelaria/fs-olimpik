@@ -235,7 +235,7 @@ $(function (){
     var offset = 200;
     if ($(this).data('offset') != undefined) offset = $(this).data('offset');
     
-    $.scrollTo(target, 500, { offset: -offset });
+    $.scrollTo(target, 600, { offset: -offset });
     
     return false;
   });

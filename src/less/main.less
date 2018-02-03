@@ -34,6 +34,10 @@ h1,h2 {
   background-position: top center;
   background-repeat: repeat-y;
 
+
+  @media @tablet {
+    //background: none;
+  }
   @media @mobiles {
    background: #ffffff;
   }
@@ -132,8 +136,8 @@ h1,h2 {
       @media @mobiles {
         width: 120px;
       }
-
     }
+
     &--phone {
       display: none;
     }
@@ -170,7 +174,10 @@ h1,h2 {
 
     .header__item--phone {
       display: block;
-      @media @mobiles {
+      a {
+        line-height: 65px;
+      }
+      @media @not-desktop {
         display: none;
       }
     }
@@ -196,17 +203,15 @@ h1,h2 {
 .navbar-toggler {
   display: none;
   border: none;
-  width: 25px;
-  height: 21px;
+  
   cursor: pointer;
   background: 0 0;
   float: right;
 
   position: absolute;
-  right: 20px;
-  top: 10px;
+ 
   z-index: 2;
-
+  
   &__bar {
     background: #ffffff;
     display: block;
@@ -215,13 +220,27 @@ h1,h2 {
     margin-bottom: 6px;
   }
 
-  @media @mobiles {
+  @media @not-desktop {
     display: block;
+  }
+
+  @media @tablet {
+    right: 20px;
+    top: 25px;
+    width: 40px;
+    height: 30px;
+  }
+
+  @media @mobiles {
+    right: 20px;
+    top: 10px;
+    width: 25px;
+    height: 21px;
   }
 }
 .nav {
   
-  @media @mobiles {
+  @media @not-desktop {
     background-color: #00000a;
     width: 165px;
     position: absolute;
@@ -233,19 +252,13 @@ h1,h2 {
     overflow: hidden;
     z-index: 99;
     
-
-
     &--active {
       display: block;
       position: absolute;
       right: 0;
       top: 40px;
-
-      
-
       max-height: 1000px;
       transition: max-height .35s ease-in;
-
     }
   }
 
@@ -261,7 +274,7 @@ h1,h2 {
       margin-right: 0;
     }
 
-    @media @mobiles {
+    @media @not-desktop {
         margin: 0;
         display: block;
 
@@ -294,7 +307,7 @@ h1,h2 {
       color: #e1002b;
     }
 
-    @media @mobiles {
+    @media @not-desktop {
       line-height: 35px;
       text-align: right;
       padding:0 15px;
@@ -338,6 +351,9 @@ h1,h2 {
   &--page {
     padding-top: 80px;
     
+    @media @tablet {
+      padding-top: 50px;
+    }
     @media @mobiles {
       padding-top: 35px;
       padding-bottom: 20px;
@@ -347,6 +363,9 @@ h1,h2 {
   }
 
   &--what {
+    @media @tablet {
+      padding-top: 120px;
+    }
     @media @mobiles {
       background-image: url('../img/bg-section-what-sm.jpg');
     }
@@ -357,7 +376,14 @@ h1,h2 {
     }
   }
   &--command {
+    margin-bottom: 130px;
+    
+    @media @tablet {
+      margin-bottom: 100px;
+    }
+    
     @media @mobiles {
+      margin-bottom: 0;
       padding-top: 35px;
       padding-bottom: 50px;
       background-image: url('../img/bg-section-commands-sm.jpg');
@@ -368,7 +394,11 @@ h1,h2 {
       margin-bottom: 80px;
     }
     margin-bottom: 200px;
+    
 
+    @media @tablet {
+      margin-bottom: 140px;
+    }
     @media @mobiles {
       padding-top: 35px;
       padding-bottom: 20px;
@@ -394,6 +424,10 @@ h1,h2 {
 
   &--trainers {
     margin-bottom: 120px;
+  
+    @media @tablet {
+      margin-bottom: 100px;
+    }
 
     @media @mobiles {
       background-image: url('../img/bg-section-trainers-sm.jpg');
@@ -490,6 +524,10 @@ h1,h2 {
     flex: 1 1 0;
     flex-basis: 100%;
     order: 3;
+
+    @media @mobiles {
+      margin-bottom: 15px;
+    }
   }
 
   &__title {
@@ -507,12 +545,22 @@ h1,h2 {
   &__form {
     flex: 1 1 0;
     order: 2;
-
+    @media @mobiles {
+      padding:0;
+    }
+  }
+  
+  @media @tablet {
+    height: 390px;
   }
   
   @media @mobiles {
     height: auto;
     display: block;
+    max-width: 400px;
+    left: 0;
+    right: 0;
+    margin: auto;
   }
   
   
@@ -523,7 +571,11 @@ h1,h2 {
     font-weight: 400;
     text-transform: uppercase;
     margin-bottom: 20px;
-
+    
+    @media @tablet {
+      font-size: 41px;
+    }
+    
     @media @mobiles {
       font-size: 31px;
     }
@@ -576,7 +628,7 @@ h1,h2 {
   
   text-transform: uppercase;
   text-decoration: none;
-
+  text-align: center;
   
   cursor: pointer;
   &--white {
@@ -698,7 +750,10 @@ h1,h2 {
     font-weight: 700;
     margin-bottom: 5px;
     
-
+    @media @tablet {
+      font-size: 27px;
+      line-height: 21px;
+    }
     @media @mobiles {
       font-size: 13px;
       line-height: 15px;
@@ -721,7 +776,11 @@ h1,h2 {
     font-size: 18px;
     text-align: left;
     word-wrap: break-word;
-
+    
+    @media @tablet {
+      font-size: 16px;
+      line-height: 21px;
+    }
     @media @mobiles {
       font-size: 12px;
       line-height: 16px;
@@ -747,7 +806,11 @@ h1,h2 {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-
+  
+  @media @tablet {
+    height: 200px;
+    padding: 60px 0;
+  }
 
   @media @mobiles {
     height: 110px;
@@ -758,7 +821,7 @@ h1,h2 {
   &__text {
     position: relative;
 
-    height: 90px;
+    height: 80px;
     background-image: url('../img/bg-roll.png');
     
     background-repeat: no-repeat;
@@ -772,6 +835,15 @@ h1,h2 {
     text-transform: uppercase;
     text-align: center;
     
+    @media @tablet {
+      display: flex;  
+      align-items: center;
+      font-size: 18px;
+      //height: 45px;
+      padding: 0 10px;
+    }
+
+
     @media @mobiles {
       display: flex;  
       align-items: center;
@@ -790,6 +862,10 @@ h1,h2 {
       background-position: center;
       background-size: contain;
       background-repeat: no-repeat;
+
+      @media @tablet {
+        top: -10px;
+      }
 
       @media @mobiles {
         height: 52px;
@@ -819,8 +895,11 @@ h1,h2 {
 .info {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 130px;
   
+  @media @mobiles {
+    margin-bottom: 100px;
+  }
+
   @media @mobiles {
     display:block;
     margin-bottom: 0;
@@ -846,19 +925,30 @@ h1,h2 {
     
     width: 340px;
     height: 340px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-bottom: 15px;
+    
     img {
       transition: transform 0.3s ease;
       transform: scale(1.1);
+    }
+  
+    @media @desktop {
+      width: 250px;
+      height: 250px;
+    }
+
+    @media @tablet {
+      width: 200px;
+      height: 200px;
+      margin-bottom: 15px;
     }
 
     @media @mobiles {
       width: 200px;
       height: 200px;
-
-      left: 0;
-      right: 0;
-      margin: auto;
-
       margin-bottom: 15px;
 
       img {
@@ -875,6 +965,13 @@ h1,h2 {
     font-size: 34px;
     font-weight: 700;
 
+    @media @tablet {
+      font-size: 27px;
+      line-height: 21px;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
     @media @mobiles {
       font-size: 20px;
       text-align: center;
@@ -888,6 +985,11 @@ h1,h2 {
     font-size: 18px;
     text-align: left;
     word-wrap: break-word;
+    
+    @media @tablet {
+      font-size: 16px;
+      line-height: 21px;
+    }
 
     @media @mobiles {
       font-size: 12px;
@@ -922,6 +1024,13 @@ h1,h2 {
     text-align: center;
     margin-bottom: 30px;
 
+    @media @not-desktop {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
     @media @mobiles {
       margin-bottom: 15px;
       padding: 0 25px;
@@ -941,6 +1050,12 @@ h1,h2 {
   &__title {
     font-size: 34px;
     font-weight: 700;
+    
+    @media @tablet {
+      font-size: 21px;
+      line-height: 28px;
+    }
+
     @media @mobiles {
       font-size: 14px;
       line-height: 21px;
@@ -953,6 +1068,12 @@ h1,h2 {
     font-size: 18px;
     text-align: left;
     word-wrap: break-word;
+    
+    @media @tablet {
+      font-size: 16px;
+      line-height: 21px;
+    }
+
     @media @mobiles {
       font-size: 12px;
       line-height: 16px;
@@ -996,7 +1117,12 @@ h1,h2 {
     border-bottom: 1px solid #ff0000;
     margin-bottom: 15px;
     padding-bottom: 15px;
+      
 
+    @media @tablet {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
     @media @mobiles {
       font-size: 14px;
       margin-bottom: 10px;
@@ -1008,16 +1134,16 @@ h1,h2 {
     font-weight: 400;
     line-height: 28px;
 
+    @media @tablet {
+      font-size: 16px;
+      line-height: 21px;
+    }
+
     @media @mobiles {
       font-size: 12px;
       line-height: 15px;
     }
   }
-}
-
-
-.mapblock {
-
 }
 
 .footer {
@@ -1477,9 +1603,7 @@ h1,h2 {
     font-size: 30px;
     font-weight: 400;
     line-height: 30px;
-  
-  
-
+    
     &--trainers {
       background-image: url('../img/bg-trainers.png');
       background-repeat: no-repeat;
@@ -1492,7 +1616,13 @@ h1,h2 {
       }
     
     }
-
+    
+    @media @tablet {
+      font-size: 25px;
+      line-height: 30px;
+      padding-right: 35%;
+      padding-bottom: 80px;
+    }
 
     @media @mobiles {
       font-size: 12px;
@@ -1510,9 +1640,15 @@ h1,h2 {
   @media @mobiles {
     display: block;
   }
+
   &__map {
     height: 575px;
     width: 70%;
+  
+    @media @tablet {
+      width: 50%;
+      //height: 350px;
+    }
 
     @media @mobiles {
       width: 100%;
@@ -1522,7 +1658,9 @@ h1,h2 {
 
   &__info {
     width: 30%;
-    
+    @media @tablet {
+      width: 50%;
+    }
     @media @mobiles {
       width: 100%;
     }
@@ -1549,7 +1687,12 @@ h1,h2 {
       width: 100%;
       height: auto;
     }
-
+    
+    @media @tablet {
+      width: 300px;
+      height: auto;
+    }
+    
     @media @mobiles {
       width: 100%;
       height: auto;
@@ -1567,6 +1710,11 @@ h1,h2 {
     font-weight: 400;
     line-height: 28px;
     padding-bottom: 50px;
+  
+    @media @tablet {
+      font-size: 16px;
+      line-height: 21px;
+    }
 
     @media @mobiles {
       font-size: 12px;
@@ -1755,6 +1903,8 @@ h1,h2 {
 }
 .swiper-slide {
   cursor: pointer;
+  font-size: 0;
+
   img {
     width: 100%;
   }
