@@ -99,7 +99,7 @@
       <a href="tel:88001007374" class="link strip__link">8-800-100-73-74</a>
     </div>
     <div class="strip__item">
-      <a href="#" class="btn btn--br strip__btn">Заказать звонок</a>
+      <a data-event="jqm" data-overlay="callback" href="#" class="btn btn--br strip__btn">Заказать звонок</a>
     </div>
   </div>
 </div>
@@ -116,12 +116,12 @@
     </div>
     <nav id="nav" class="header__item header__item--nav nav">
       <ul class="nav__list">
-        <li class="nav__item"><a href="#" class="nav__link">О школе</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">Фото</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">Наши тренеры</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">Цены</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">Отзывы</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">Адреса</a></li>
+        <li class="nav__item"><a href="#section-about" class="nav__link scroll-to-target">О школе</a></li>
+        <li class="nav__item"><a href="#section-photos" class="nav__link scroll-to-target">Фото</a></li>
+        <li class="nav__item"><a href="#trainers" class="nav__link scroll-to-target">Наши тренеры</a></li>
+        <li class="nav__item"><a href="#prices" class="nav__link scroll-to-target">Цены</a></li>
+        <li class="nav__item"><a href="#reviews" class="nav__link scroll-to-target">Отзывы</a></li>
+        <li class="nav__item"><a href="#address" class="nav__link scroll-to-target">Адреса</a></li>
         <li class="nav__item"><a href="#" class="nav__link nav__link--red">Франшиза</a></li>
       </ul>
     </nav>
@@ -159,7 +159,7 @@
       </div>
     </div>
   </section>
-  <section class="section section--what">
+  <section class="section section--what" id="section-about">
     <div class="container">
       <h2 class="section__title section__title--white section__title--right">ЧТО МЫ МОЖЕМ ДАТЬ РЕБЁНКУ?</h2>
       <div class="keys">
@@ -200,7 +200,7 @@
           </div>
         </div>        
       </div>
-      <a href="#" class="btn btn--white pull--right">Записаться на открытый урок</a>
+      <a href="#" data-event="jqm" data-overlay="lesson" class="btn btn--white pull--right">Записаться на открытый урок</a>
     </div>
   </section>
   <section class="section section--roll">
@@ -250,7 +250,7 @@
       </div>
     </div>
   </section>
-  <section class="section section--photos" >
+  <section class="section section--photos" id="section-photos">
     <div class="container">
       <h2 class="section__title section__title--white">Фотографии с занятий</h2>
       <!-- Slider main container -->
@@ -376,7 +376,7 @@
       </div>
     </div>
   </section>
-  <section class="section section--trainers">
+  <section class="section section--trainers" id="trainers">
     <div class="container">
       <h2 class="section__title section__title--center">Наши тренеры</h2>
       <div class="section__image section-image">
@@ -429,18 +429,18 @@
       </div>
     </div>
   </section>
-  <section class="section section--promo">
+  <section class="section section--promo" id="prices">
     <div class="container">
       <div class="promo">
         <div class="promo__info">
           <h2 class="promo__title">Стоимость абонемента на месяц от 4800 рублей</h2>
           <p class="promo__text">Стоимость зависит от выбранного филиала, количества занятий в месяц и возраста ребенка.</p>
         </div>
-        <a class="btn btn--black promo__btn">Уточнить стоимость</a>
+        <a href="#" data-event="jqm" data-overlay="price" class="btn btn--black promo__btn">Уточнить стоимость</a>
       </div>
     </div>
   </section>
-  <section class="section section--reviews">
+  <section class="section section--reviews" id="reviews">
     <div class="container">
       <h2 class="section__title section__title--right">Отзывы родителей</h2>
       <div class="swiper--reviews swiper-container">
@@ -508,7 +508,7 @@
       </div>
     </div>
   </section>
-  <section class="section section--map">
+  <section class="section section--map" id="address">
     <div class="container">
       <h2 class="section__title section__title--white">Наши филиалы</h2>
     </div>
@@ -561,7 +561,7 @@
         <span>Детская футбольная школа ОЛИМПИК</span>
       </div>
       <div class="footer__item footer__item--btn">
-        <a href="#" class="btn btn--br footer__btn">Остались вопросы?</a>
+        <a href="#"  data-event="jqm" data-overlay="callback" class="btn btn--br footer__btn">Остались вопросы?</a>
       </div>
       <div class="footer__item footer__item--info">
         <a href="tel:88001007374" class="link link--white footer__tel">8-800-100-73-74</a>
@@ -573,7 +573,7 @@
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBC_exc_scRvoGDPe2TvK6Lhqb2huiNgOk&callback=init_map"></script>
   <script type="text/javascript" src="./js/bundle.js"></script>
   
-  <section class="overlay">
+  <section class="overlay" id="photos">
     <div class="container">
       <div class="flexslider">
         <div class="overlay__close"></div>

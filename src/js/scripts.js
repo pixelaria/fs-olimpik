@@ -1,3 +1,5 @@
+
+
  var markers = [
     ["Выборгское шоссе, д. 132",60.05842, 30.3043183,false],
     ["Приморский пр., д.50",59.98247600000001,30.240202,false],
@@ -53,7 +55,7 @@ function init_map() {
           mapTypeIds: [google.maps.MapTypeId.ROADMAP, o]
       }
   }),
-  n = (new google.maps.MarkerImage("pin.png", new google.maps.Size(84, 86), new google.maps.Point((-10), (-14)), new google.maps.Point(52, 46)), new google.maps.MarkerImage("pin.png", new google.maps.Size(70, 88), new google.maps.Point((-17), (-8)), new google.maps.Point(35, 44)));
+  n = (new google.maps.MarkerImage("../img/pin.png", new google.maps.Size(84, 86), new google.maps.Point((-10), (-14)), new google.maps.Point(52, 46)), new google.maps.MarkerImage("../img/pin.png", new google.maps.Size(70, 88), new google.maps.Point((-17), (-8)), new google.maps.Point(35, 44)));
 
   for (var i = 0; i < markers.length; i++) {
       var marker = markers[i];
@@ -206,7 +208,7 @@ $(function (){
 
   $(document).on('click','.swiper--photos .swiper-slide', function(e){
     $('body').addClass('noscroll');
-    $('.overlay').addClass('overlay--active');
+    $('#photos').addClass('overlay--active');
     var index = swiper_photos.activeIndex;
     flexslider.flexslider(index);
     return false;
@@ -218,11 +220,31 @@ $(function (){
     return false;
   });
 
+  $('body').delegate('*[data-event="jqm"]', 'click', function(e) {
+    var overlay = $(this).data('overlay');
+    if (overlay) {
+      $('#'+overlay).addClass('overlay--active');
+      $('body').addClass('noscroll');
+    }
+    return false;
+  });
+
+  $('body').delegate('.scroll-to-target', 'click', function(e) {
+    console.log('scroll-to-target');
+    var target = $(this).attr('href');
+    var offset = 200;
+    if ($(this).data('offset') != undefined) offset = $(this).data('offset');
+    
+    $.scrollTo(target, 500, { offset: -offset });
+    
+    return false;
+  });
+
   $(window).scroll(function(){
     var header = $('.header'),
         main = $('.main'),
         scroll = $(window).scrollTop();
-  if (scroll >= 250) {
+    if (scroll >= 250) {
       header.addClass('header--fixed');
       main.addClass('main--fixed');
     } else {
