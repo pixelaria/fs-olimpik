@@ -252,5 +252,4 @@ $(function (){
       main.removeClass('main--fixed');
     }
   });
-
 });

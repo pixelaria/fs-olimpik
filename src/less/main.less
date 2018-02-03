@@ -29,12 +29,17 @@ h1,h2 {
 }
 
 .body {
-  background: url('../img/bg-main.png');
+  background-image: url('../img/bg-main.png');
   background-size: auto;
   background-position: top center;
   background-repeat: repeat-y;
 
-
+  @media @desktop {
+    background-image: url('../img/bg-main-md.png');
+    background-size: auto;
+    background-position: top center;
+    background-repeat: repeat-y;
+  }
   @media @tablet {
     //background: none;
   }
@@ -122,12 +127,11 @@ h1,h2 {
 
 
     &--logo {
-      width: 200px;
+      
       position: relative;
 
       img {
         position: absolute;
-        top:-45px;
         @media @mobiles {
           top:-30px;
         }
@@ -135,6 +139,21 @@ h1,h2 {
 
       @media @mobiles {
         width: 120px;
+      }
+
+      @media @desktop {
+        width: 180px;
+
+        img {
+          top: -40px;
+        }
+      }
+
+      @media @desktop-xl {
+        width: 200px;
+        img {
+          top: -45px;
+        }
       }
     }
 
@@ -269,11 +288,20 @@ h1,h2 {
 
   &__item {
     display: inline-block;
-    margin-right: 30px;
+    
+
+    
+
     &:last-child {
       margin-right: 0;
     }
-
+    
+    @media @desktop-xl {
+      margin-right: 30px;
+    }
+    @media @desktop {
+      margin-right: 15px;
+    }
     @media @not-desktop {
         margin: 0;
         display: block;
@@ -351,6 +379,10 @@ h1,h2 {
   &--page {
     padding-top: 80px;
     
+    @media @desktop {
+      padding-top: 50px;
+    }
+    
     @media @tablet {
       padding-top: 50px;
     }
@@ -371,6 +403,10 @@ h1,h2 {
     }
   }
   &--roll {
+    @media @desktop {
+      margin-bottom: 50px;
+    }
+    
     @media @mobiles {
       background-image: url('../img/bg-section-roll-sm.jpg');
     }
@@ -378,6 +414,10 @@ h1,h2 {
   &--command {
     margin-bottom: 130px;
     
+    @media @desktop {
+      margin-bottom: 60px;
+    }
+
     @media @tablet {
       margin-bottom: 100px;
     }
@@ -395,6 +435,9 @@ h1,h2 {
     }
     margin-bottom: 200px;
     
+    @media @desktop {
+      margin-bottom: 160px;
+    }
 
     @media @tablet {
       margin-bottom: 140px;
@@ -425,6 +468,10 @@ h1,h2 {
   &--trainers {
     margin-bottom: 120px;
   
+    @media @desktop {
+      margin-bottom: 100px;
+    }
+
     @media @tablet {
       margin-bottom: 100px;
     }
@@ -486,6 +533,10 @@ h1,h2 {
     
     margin-bottom: 30px;
 
+    @media @desktop {
+      font-size: 41px;
+    }
+    
     @media @mobiles {
       font-size: 21px;
       line-height: 25px;
@@ -524,6 +575,11 @@ h1,h2 {
     flex: 1 1 0;
     flex-basis: 100%;
     order: 3;
+    
+
+    @media @desktop {
+      margin-top: 80px;
+    }
 
     @media @mobiles {
       margin-bottom: 15px;
@@ -572,6 +628,10 @@ h1,h2 {
     text-transform: uppercase;
     margin-bottom: 20px;
     
+    @media @desktop {
+      font-size: 48px;
+    }
+
     @media @tablet {
       font-size: 41px;
     }
@@ -807,6 +867,7 @@ h1,h2 {
   background-size: contain;
   background-repeat: no-repeat;
   
+  
   @media @tablet {
     height: 200px;
     padding: 60px 0;
@@ -835,6 +896,15 @@ h1,h2 {
     text-transform: uppercase;
     text-align: center;
     
+    
+    @media @desktop-xl {
+      font-size: 29px;
+    }
+    
+    @media @desktop {
+      font-size: 25px;
+    }
+    
     @media @tablet {
       display: flex;  
       align-items: center;
@@ -857,15 +927,11 @@ h1,h2 {
       position: absolute;  
       width: 30px;
       height: 100px;
-      top:-5px;
+      top:-10px;
 
       background-position: center;
       background-size: contain;
       background-repeat: no-repeat;
-
-      @media @tablet {
-        top: -10px;
-      }
 
       @media @mobiles {
         height: 52px;
@@ -1007,7 +1073,10 @@ h1,h2 {
   &__item {
     width: ~"calc(33.33% - 15px)";
     margin-bottom: 60px;
-
+    
+    @media @desktop {
+      margin-bottom: 45px;
+    }
     @media @mobiles {
       width: 49%;
       margin-bottom: 30px;
@@ -1089,10 +1158,13 @@ h1,h2 {
   justify-content: space-between;
   margin-bottom: 60px;
 
+  flex-flow: row wrap;
+
   @media @mobiles {
     display: block;
     margin-bottom: 0;
   }
+
   &__item {
     color: #00000a;
     background-color: #ffffff;
@@ -1102,6 +1174,10 @@ h1,h2 {
     
     &:last-child {
       margin-bottom: 0;
+    }
+
+    @media @desktop {
+      padding: 25px;
     }
     @media @mobiles {
       width: 100%;
@@ -1133,6 +1209,11 @@ h1,h2 {
     font-size: 18px;
     font-weight: 400;
     line-height: 28px;
+    
+    @media @desktop {
+      font-size: 17px;
+      line-height: 25px;
+    }
 
     @media @tablet {
       font-size: 16px;
@@ -1710,7 +1791,12 @@ h1,h2 {
     font-weight: 400;
     line-height: 28px;
     padding-bottom: 50px;
-  
+    
+    @media @desktop {
+      font-size: 17px;
+      line-height: 25px;
+    }
+
     @media @tablet {
       font-size: 16px;
       line-height: 21px;
