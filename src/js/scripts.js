@@ -143,9 +143,18 @@ $(function (){
     select.find('.select__input').val(value);
     select.find('.select__input').trigger('change');
     select.find('.select__placeholder').html(text);
+    select.removeClass('select--opened');
     return false;
   });
   
+  $('.select__item--map').click(function(e){
+      var data = $(this).data('index');
+      var marker = markers[parseInt(data)];
+      t.setCenter(marker[3].getPosition());
+      t.setZoom(14);
+      google.maps.event.trigger(marker[3], 'click');
+  });
+
 
   $('.navbar-toggler').click(function(e){
     var target = $(this).data('target');
