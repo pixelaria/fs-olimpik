@@ -1,5 +1,3 @@
-
-
  var markers = [
     ["Выборгское шоссе, д. 132",60.05842, 30.3043183,false],
     ["Приморский пр., д.50",59.98247600000001,30.240202,false],
@@ -136,11 +134,9 @@ $(function (){
   });
 
   $(document).on('click','.select__item', function(e){
-    var value = $(this).data('value');
     var text = $(this).html();
     var select = $(this).closest('.select');
-    
-    select.find('.select__input').val(value);
+    select.find('.select__input').val(text);
     select.find('.select__input').trigger('change');
     select.find('.select__placeholder').html(text);
     select.removeClass('select--opened');
@@ -161,7 +157,8 @@ $(function (){
     $('#'+target).toggleClass('nav--active');
   });
 
-
+  $('.im--phone').mask('+7 (000) 000-00-00');
+  
   var swiper_photos = new Swiper('.swiper--photos', {
     effect: 'coverflow',
     loop: false,
@@ -226,6 +223,10 @@ $(function (){
   $(document).on('click','.overlay__close', function(e){
     $('body').removeClass('noscroll');
     $('.overlay').removeClass('overlay--active');
+
+    if ($(this).hasClass('overlay__close--remove')) {
+      $(this).closest('.overlay').remove();
+    }
     return false;
   });
 

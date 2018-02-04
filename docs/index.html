@@ -14,33 +14,32 @@
 <body class="body">
 
 <section class="overlay" id="callback">
-  <div class="form form--popup">
+  <form class="form form--popup" action="" name="form-1">
     <div class="overlay__close overlay__close--form"></div>
     <div class="form__title">ОСТАВЬТЕ ВАШ ТЕЛЕФОН</div>
     <div class="form__subtitle">и мы перезвоним ВАМ в самое ближайшее время</div>
     <div class="form__fields">
-      <input type="text" class="form__input" placeholder="введите ваше имя">
-      <input type="text" class="form__input" placeholder="введите ваш телефон">
-      <a href="#" class="btn btn--form btn--red">Заказать звонок</a>
+      <input type="text" class="form__input" name="name" placeholder="введите ваше имя">
+      <input type="text" class="form__input im--phone" name="tell" placeholder="введите ваш телефон">
+      <input class="feedback btn btn--form btn--red" name="send" type="button" value="Заказать звонок">
     </div>
-  </div>
+  </form>
 </section>
 
 <section class="overlay" id="lesson">
-  <div class="form form--popup">
+  <form class="form form--popup" action="" name="form-2">
     <div class="overlay__close overlay__close--form"></div>
     <div class="form__title">Записаться <br> на открытый урок</div>
     <div class="form__fields">
       <div class="select">
-        <input class="select__input" name="city" value="не определился" type="hidden">
-        <div class="select__placeholder">выберите город</div>
+        <input class="select__input" name="city" value="Санкт-Петербург" type="hidden">
+        <div class="select__placeholder">Санкт-Петербург</div>
         <div class="select__inner">
           <div class="select__item" data-text="Санкт-Петербург" data-value="Санкт-Петербург">Санкт-Петербург</div>
-          <div class="select__item" data-text="Москва" data-value="Москва">Москва</div>
         </div>
       </div>
       <div class="select">
-        <input class="select__input" name="city" value="не определился" type="hidden">
+        <input class="select__input" name="office" value="не определился" type="hidden">
         <div class="select__placeholder">выберите филиал</div>
         <div class="select__inner">
           <div class="select__item">Не определился</div>
@@ -55,28 +54,27 @@
           <div class="select__item" data-index="9">Михаила Дудина, д.21А</div>
         </div>
       </div>
-      <input type="text" class="form__input" placeholder="введите ваше имя">
-      <input type="text" class="form__input" placeholder="введите ваш телефон">
-      <a href="#" class="btn btn--form btn--red">Записаться</a>
+      <input type="text" class="form__input" name="name" placeholder="введите ваше имя">
+      <input type="text" class="form__input im--phone" name="tell" placeholder="введите ваш телефон">
+      <input class="feedback btn btn--form btn--red" name="send" type="button" value="Записаться">
     </div>
-  </div>
+  </form>
 </section>
 
 <section class="overlay" id="price">
-  <div class="form form--popup">
+  <form class="form form--popup" action="" name="form-2">
     <div class="overlay__close overlay__close--form"></div>
     <div class="form__title">Уточнить <br> стоимость</div>
     <div class="form__fields">
       <div class="select">
-        <input class="select__input" name="city" value="не определился" type="hidden">
-        <div class="select__placeholder">выберите город</div>
+        <input class="select__input" name="city" value="Санкт-Петербург" type="hidden">
+        <div class="select__placeholder">Санкт-Петербург</div>
         <div class="select__inner">
           <div class="select__item" data-text="Санкт-Петербург" data-value="Санкт-Петербург">Санкт-Петербург</div>
-          <div class="select__item" data-text="Москва" data-value="Москва">Москва</div>
         </div>
       </div>
       <div class="select">
-        <input class="select__input" name="city" value="не определился" type="hidden">
+        <input class="select__input" name="office" value="не определился" type="hidden">
         <div class="select__placeholder">выберите филиал</div>
         <div class="select__inner">
           <div class="select__item">Не определился</div>
@@ -91,11 +89,11 @@
           <div class="select__item" data-index="9">Михаила Дудина, д.21А</div>
         </div>
       </div>
-      <input type="text" class="form__input" placeholder="введите ваше имя">
-      <input type="text" class="form__input" placeholder="введите ваш телефон">
-      <a href="#" class="btn btn--form btn--red">Узнать цену</a>
+      <input type="text" class="form__input" name="name" placeholder="введите ваше имя">
+      <input type="text" class="form__input im--phone" name="tell" placeholder="введите ваш телефон">
+      <input class="feedback btn btn--form btn--red" name="send" type="button" value="Записаться">
     </div>
-  </div>
+  </form>
 </section>
 
 <div class="strip">
@@ -155,9 +153,10 @@
           </div>          
         </div>
         <div class="page__form col-md-5 col-lg-4">
-          <form action="#" class="form form--top">
-            <input type="text" class="form__input" placeholder="введите ваш телефон">
-            <a href="#" class="form__btn btn btn--red">запиcаться сейчас - Бесплатно!</a>
+          <form action="" class="form form--top" name="form-1">
+            <input type="hidden" name="name" value="быстрый заказ">
+            <input type="text" class="form__input im--phone" name="tell" placeholder="введите ваш телефон">
+            <input class="feedback form__btn btn btn--red" name="send" type="button" value="Запиcаться сейчас - Бесплатно!">
             <p class="form__info">запишитесь прямо сейчас на первое бесплатное ознакомительное занятие</p>
           </form>
         </div>
@@ -450,10 +449,10 @@
         <div class="swiper-wrapper">
             <div class="swiper-slide review">
               <div class="review__photo">
-                <img src="./img/review-1.png" alt="Отзыв" class="img img--responsive">
+                <img src="./img/review-1.jpg" alt="Отзыв" class="img img--responsive">
               </div>
               <div class="review__desc">
-                <div class="review__text">Начали заниматься в начале августа в филиале на Приморском у тренера Романа. Начали с нуля, хотя 7 лет почти. Удачно, что попали в новую команду, а не давно сыгранную, легче было адаптироваться. На тренеровки ребёнок идёт с удовольствием, видно, что глаза горят. Это самое главное на данный момент. А дальше будем смотреть:)</div>
+                <div class="review__text">Начали заниматься в конце августа в филиале на Приморском у тренеры Романа. Начали с нуля, хотя уже 7 лет почти. Удачно, что попали в новую команду, а не давно сыгранную, легче было адаптироваться. На тренировки ребенок идет с удовольствием, видно, что глаза горят. Это самое главное на данный момент. А дальше будем смотреть:)</div>
                 <div class="review__info">
                   <div class="review__stars">
                     <span class="star"></span>
@@ -462,7 +461,7 @@
                     <span class="star"></span>
                     <span class="star"></span>
                   </div>
-                  <div class="review__author">Наталья Федотова <a href="">(Вконтакте)</a></div>
+                  <div class="review__author">Наталья Федотова <a href="https://vk.com/id616470" target="_blank">(Вконтакте)</a></div>
                 </div>
               </div>
             </div>
@@ -480,7 +479,7 @@
                     <span class="star"></span>
                     <span class="star"></span>
                   </div>
-                  <div class="review__author">Наталья Федотова <a href="">(Вконтакте)</a></div>
+                  <div class="review__author">Ирина Петкун, мать Димы <a href="https://vk.com/id2224502" target="_blank">(Вконтакте)</a></div>
                 </div>
               </div>
             </div>
@@ -498,10 +497,46 @@
                     <span class="star"></span>
                     <span class="star"></span>
                   </div>
-                  <div class="review__author">Наталья Федотова <a href="">(Вконтакте)</a></div>
+                  <div class="review__author">Татьяна Шило, мать Максима <a href="https://vk.com/id140085271" target="_blank">(Вконтакте)</a></div>
                 </div>
               </div>
             </div>
+            <div class="swiper-slide review">
+              <div class="review__photo">
+                <img src="./img/review-4.jpg" alt="Отзыв" class="img img--responsive">
+              </div>
+              <div class="review__desc">
+                <div class="review__text">Мы начали ходить на тренировки по адресу Уманский д.68 когда нам было 2 года и 10 месяцев) Первая тренировка прошла скажем так не очень - в слезах! Но зато потом ребёнок освоился и стал отлично заниматься , ему очень нравиться! Вырабатывается дисциплина, выдержка и навыки владения мячом. Отличная физическая подготовка, в игровой форме и отличная возможность выплеснуть детскую активную инерцию и получить навыки! Мне очень нравиться клуб "Олимпик"! Замечательные тренера, организаторы и классный стадион , с супер покрытием!</div>
+                <div class="review__info">
+                  <div class="review__stars">
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                  </div>
+                  <div class="review__author">Алена Евгеньевна, мать Арсения <a href="https://vk.com/alenka553" target="_blank">(Вконтакте)</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide review">
+              <div class="review__photo">
+                <img src="./img/review-5.jpg" alt="Отзыв" class="img img--responsive">
+              </div>
+              <div class="review__desc">
+                <div class="review__text">Очень понравились тренировки. Интересные и грамотно построены. А также хочу отметить тренерский состав и поблагодарить Никиту Андреевича и Антона Андреевича за терпение моего не совсем простого мальчика. Желаю успехов и процветания школе!</div>
+                <div class="review__info">
+                  <div class="review__stars">
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                  </div>
+                  <div class="review__author">Арина Холодова (Трофимова), мать Максима <a href="https://vk.com/bobrinka" target="_blank">(Вконтакте)</a></div>
+                </div>
+              </div>
+            </div>                        
         </div>
         <!-- If we need navigation buttons -->
         <div class="swiper-button-prev reviews__prev"></div>
@@ -519,20 +554,19 @@
         <div id="map" class="mapblock__map">
         </div>
         <div class="mapblock__info">
-          <div class="form form--map">
+          <form class="form form--map" action="" name="form-2">
             <p class="form__title">ОСТАВЬТЕ ВАШ ТЕЛЕФОН</p>
             <p class="form__subtitle">и мы перезвоним, чтобы <br>договориться о записи</p>
           
             <div class="select">
-              <input class="select__input" name="city" value="не определился" type="hidden">
-              <div class="select__placeholder">выберите город</div>
+              <input class="select__input" name="city" value="Санкт-Петербург" type="hidden">
+              <div class="select__placeholder">Санкт-Петербург</div>
               <div class="select__inner">
                 <div class="select__item" data-text="Санкт-Петербург" data-value="Санкт-Петербург">Санкт-Петербург</div>
-                <div class="select__item" data-text="Москва" data-value="Москва">Москва</div>
               </div>
             </div>
             <div class="select">
-              <input class="select__input" name="city" value="не определился" type="hidden">
+              <input class="select__input" name="office" value="не определился" type="hidden">
               <div class="select__placeholder">выберите филиал</div>
               <div class="select__inner">
                 <div class="select__item">Не определился</div>
@@ -547,10 +581,10 @@
                 <div class="select__item select__item--map" data-index="9">Михаила Дудина, д.21А</div>
               </div>
             </div>
-            <input type="text" class="form__input" placeholder="введите ваше имя" name="name">
-            <input type="text" class="form__input" placeholder="введите ваш номер телефона" name="phone">
-            <a href="#" class="btn btn--form btn--red">Записаться</a>
-          </div>
+            <input type="text" class="form__input" name="name" placeholder="введите ваше имя">
+            <input type="text" class="form__input im--phone" name="tell" placeholder="введите ваш телефон">
+            <input class="feedback btn btn--form btn--red" name="send" type="button" value="Записаться">
+          </form>
         </div>
       </div>
     </div>
@@ -572,11 +606,11 @@
           </a>
           <a href="tel:88001007374" class="link link--white footer__tel">8-800-100-73-74</a>
         </div>
-        <a href="#" class="link link--white footer__privacy">Политика конфиденциальноcти</a>
+        <a href="./Politika.pdf" target="_blank" class="link link--white footer__privacy">Политика конфиденциальноcти</a>
       </div>
       <div class="footer__item footer__item--info">
         <a href="tel:88001007374" class="link link--white footer__tel">8-800-100-73-74</a>
-        <a href="#" class="link link--white footer__privacy">Политика конфиденциальноcти</a>
+        <a href="./Politika.pdf" target="_blank" class="link link--white footer__privacy">Политика конфиденциальноcти</a>
       </div>
     </div>
   </footer>
