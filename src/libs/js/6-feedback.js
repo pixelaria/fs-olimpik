@@ -1,10 +1,3 @@
-/**
- * Created with JetBrains PhpStorm.
- * User: Vitaly
- * Date: 06.06.13
- * Time: 20:22
- * To change this template use File | Settings | File Templates.
- */
 function inArray(needle, haystack) {
     var length = haystack.length;
     for(var i = 0; i < length; i++) {

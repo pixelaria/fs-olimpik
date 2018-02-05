@@ -96,37 +96,41 @@ function init_map() {
 $(function (){
   console.log('init');
 
-  $('.section--page .parallax-layer').parallax({
-    mouseport: $("body"),
-    
-    xorigin: 0,
-    yorigin: 0
-  },{xparallax: '15px'},{xparallax: '50px'},{xparallax: '100px'});
+  var w_width = $(window).width();
+  var target = $(this).data('target');
+  
+  if (w_width>767) {
+    $('.section--page .parallax-layer').parallax({
+      mouseport: $("body"),
+      
+      xorigin: 0,
+      yorigin: 0
+    },{xparallax: '15px'},{xparallax: '50px'},{xparallax: '100px'});
 
+    $('.info__item:nth-child(1) .parallax-layer').parallax({
+      mouseport: $(this).find('.info__item:nth-child(1) .info__img'),
+      xparallax: '15px',
+      yparallax: '15px',
+      xorigin: 0,
+      yorigin: 0
+    });
 
-  $('.info__item:nth-child(1) .parallax-layer').parallax({
-    mouseport: $(this).find('.info__item:nth-child(1) .info__img'),
-    xparallax: '15px',
-    yparallax: '15px',
-    xorigin: 0,
-    yorigin: 0
-  });
+    $('.info__item:nth-child(2) .parallax-layer').parallax({
+      mouseport: $(this).find('.info__item:nth-child(2) .info__img'),
+      xparallax: '15px',
+      yparallax: '15px',
+      xorigin: 0,
+      yorigin: 0
+    });
 
-  $('.info__item:nth-child(2) .parallax-layer').parallax({
-    mouseport: $(this).find('.info__item:nth-child(2) .info__img'),
-    xparallax: '15px',
-    yparallax: '15px',
-    xorigin: 0,
-    yorigin: 0
-  });
-
-  $('.info__item:nth-child(3) .parallax-layer').parallax({
-    mouseport: $(this).find('.info__item:nth-child(3) .info__img'),
-    xparallax: '15px',
-    yparallax: '15px',
-    xorigin: 0,
-    yorigin: 0
-  });
+    $('.info__item:nth-child(3) .parallax-layer').parallax({
+      mouseport: $(this).find('.info__item:nth-child(3) .info__img'),
+      xparallax: '15px',
+      yparallax: '15px',
+      xorigin: 0,
+      yorigin: 0
+    });
+  }
 
   $(document).on('click','.select', function(e){
     $(this).toggleClass('select--opened');
@@ -241,6 +245,7 @@ $(function (){
 
   $('body').delegate('.scroll-to-target', 'click', function(e) {
     console.log('scroll-to-target');
+    $('nav').removeClass('nav--active');
     var target = $(this).attr('href');
     var offset = 200;
     if ($(this).data('offset') != undefined) offset = $(this).data('offset');

@@ -270,10 +270,10 @@ h1,h2 {
   
   @media @not-desktop {
     background-color: #00000a;
-    width: 165px;
+    width: 180px;
     position: absolute;
     right: 0;
-    top: 40px;
+    
     max-height: 0;
     height: auto;
     transition: max-height .25s ease-out;
@@ -284,10 +284,22 @@ h1,h2 {
       display: block;
       position: absolute;
       right: 0;
-      top: 40px;
       max-height: 1000px;
       transition: max-height .35s ease-in;
+
+
     }
+  }
+  @media @mobiles {
+    
+      top: 40px;
+    
+  }
+
+  @media @tablet {
+    
+      top: 70px;
+    
   }
 
 
@@ -1436,7 +1448,6 @@ h1,h2 {
 
 
 .form {
-
   &--popup {  
     position: relative;
     width: 450px;
@@ -1447,6 +1458,11 @@ h1,h2 {
     left: 0;
     right: 0;
     margin: auto;
+
+    @media @mobiles {
+      width: 320px;
+      padding: 30px 15px;
+    }
   }
 
   &--map {
@@ -1454,6 +1470,7 @@ h1,h2 {
     padding: 30px;
     @media @mobiles {
       background: none;
+      padding: 15px;  
     }
   }
   &--top {
@@ -1665,7 +1682,8 @@ h1,h2 {
     width: ~"calc(100% - 50px)";
     
     @media @mobiles {
-      top:38px;
+      top:37px;
+      width: ~"calc(100% - 30px)";
     }
   }
   
@@ -1680,10 +1698,11 @@ h1,h2 {
     }
 
     @media @mobiles {
-      line-height: 38px;
+      line-height: 21px;
       font-size: 14px;
-      height: 38px;
-      padding: 0 15px;
+      padding: 5px 10px;
+      
+      border-bottom: 1px solid #cccccc;
     }
   }
 }
@@ -1713,7 +1732,13 @@ h1,h2 {
       @media @mobiles {
         padding-bottom: 50px;
       }
-    
+
+      @media @mobile-xs {
+        background-size: 100px;
+      }
+
+      
+
     }
     
     @media @tablet {
