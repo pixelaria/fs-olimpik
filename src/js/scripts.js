@@ -190,6 +190,26 @@ $(function (){
       }
     }
   });
+  var swiper_small = new Swiper('.swiper--small', {
+    effect: 'coverflow',
+    loop: true,
+    centeredSlides: true,
+    slidesPerView: 2,
+    initialSlide: 1,
+    
+    navigation: {
+      nextEl: '.swiper--photos .swiper-button-next',
+      prevEl: '.swiper--photos .swiper-button-prev',
+    },
+    coverflowEffect: {
+      rotate: 0,
+      slideShadows: false,
+      stretch: 0,
+      depth: 100,
+      modifier:2
+    },
+
+  });
 
   var swiper = new Swiper('.swiper--reviews', {
     spaceBetween: 120,
