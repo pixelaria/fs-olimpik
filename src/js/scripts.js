@@ -129,14 +129,13 @@ $(function (){
       xorigin: 0,
       yorigin: 0
     });
-  }
 
-  $('.promo-page__parallax .parallax-layer').parallax(
-    {mouseport: $("body"),xorigin: 0,yorigin: 0},
-    {xparallax: '15px', yparallax: '15px'},{xparallax: '30px',yparallax: '30px'},{xparallax: '50px',yparallax: '50px'}
-  );
+    $('.promo-page__parallax .parallax-layer').parallax(
+      {mouseport: $("body"),xorigin: 0,yorigin: 0},
+      {xparallax: '15px', yparallax: '15px'},{xparallax: '30px',yparallax: '30px'},{xparallax: '50px',yparallax: '50px'}
+    );
 
-  $('.promo-page__childs img').parallax({
+    $('.promo-page__childs img').parallax({
       mouseport: $("body"),
       xparallax: '15px',
       yparallax: '15px',
@@ -144,10 +143,11 @@ $(function (){
       yorigin: 0
     });
 
-  $('.map__boys .parallax-layer').parallax(
-    {mouseport: $("body"),xorigin: 0,yorigin: 0},
-    {xparallax: '15px', yparallax: '15px'},{xparallax: '30px',yparallax: '30px'},{xparallax: '50px',yparallax: '50px'}
-  );
+    $('.map__boys .parallax-layer').parallax(
+      {mouseport: $("body"),xorigin: 0,yorigin: 0},
+      {xparallax: '15px', yparallax: '15px'},{xparallax: '30px',yparallax: '30px'},{xparallax: '50px',yparallax: '50px'}
+    );
+  }
 
   $(document).on('click','.select', function(e){
     $(this).toggleClass('select--opened');

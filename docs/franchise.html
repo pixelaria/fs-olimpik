@@ -85,7 +85,7 @@
       <div class="container">
         <h2 class="section__title section__title--center section__title--white">Школа футбола для детей дошкольного возраста</h2>
         <div class="section__row">
-        <div class="col-6">
+        <div class="col-md-6">
           <div class="swiper--small swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide"><img src="./img/photos/photos-1-sm.jpg" alt="" class="img--responsive"></div>
@@ -103,7 +103,7 @@
             <div class="swiper-button-next"></div>
           </div>
         </div>
-        <div class="col-6">
+        <div class="col-md-6">
           <p class="section__text section__text--white">Олимпик — это сеть профессиональных футбольных школ для детей от 3 до 8 лет. В это время ребят еще не берут в обычные секции, а занятия спортом уже приносят массу удовольствия и пользы. </p>
           <p class="section__text section__text--white">Тренировки проходят в веселой игровой форме по наиболее современным методикам обучения, разработанных специально для детей дошкольного возраста, интересных и безопасных для малышей.</p>  
         </div>
@@ -169,16 +169,9 @@
           <div class="col-md-5">
             <p class="section__text section__text--white">Проверьте, свободен ли ваш город</p>
             <div class="checker">
-              <div class="checker__select">
-                <div class="select select--checker">
-                  <input class="select__input" name="city" value="Санкт-Петербург" type="hidden">
-                  <div class="select__placeholder">Санкт-Петербург</div>
-                  <div class="select__inner">
-                    <div class="select__item" data-text="Санкт-Петербург" data-value="Санкт-Петербург">Санкт-Петербург</div>
-                    <div class="select__item" data-text="Санкт-Петербург" data-value="Санкт-Петербург">Москва</div>
-                    <div class="select__item" data-text="Санкт-Петербург" data-value="Санкт-Петербург">Ростов-на-Дону</div>
-                  </div>
-                </div>
+              <div class="checker__input">
+                <input type="text" class="form__input" placeholder="Введите город">
+                
               </div>
               <div class="checker__btn">
                 <div class="btn btn--red">Проверить</div>
@@ -311,13 +304,14 @@
     </section>
     <section class="section section--black">
       <div class="container">
-        <div class="form">
-          <div class="form__info">
-            <h2 class="form__title">Остались вопросы?</h2>
-            <p class="form__subtitle">Собственники бизнеса будут рады проконсультировать вас</p>
+        <div class="inline-form">
+          <div class="inline-form__info">
+            <h2 class="inline-form__title">Остались вопросы?</h2>
+            <p class="inline-form__subtitle">Собственники бизнеса будут рады проконсультировать вас</p>
           </div>
-          <div class="form__fields">
-            
+          <div class="inline-form__fields">
+            <input type="text" class="form__input" placeholder="Имя"><input type="text" class="form__input" placeholder="Телефон">
+            <a href="#" class="btn btn--red">Отправить</a>
           </div>
         </div>
       </div>
