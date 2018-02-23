@@ -102,7 +102,6 @@ $(function (){
   if (w_width>767) {
     $('.section--page .parallax-layer').parallax({
       mouseport: $("body"),
-      
       xorigin: 0,
       yorigin: 0
     },{xparallax: '15px'},{xparallax: '50px'},{xparallax: '100px'});
@@ -131,6 +130,19 @@ $(function (){
       yorigin: 0
     });
   }
+
+  $('.promo-page__parallax .parallax-layer').parallax(
+    {mouseport: $("body"),xorigin: 0,yorigin: 0},
+    {xparallax: '15px', yparallax: '15px'},{xparallax: '30px',yparallax: '30px'},{xparallax: '50px',yparallax: '50px'}
+  );
+
+  $('.promo-page__childs img').parallax({
+      mouseport: $("body"),
+      xparallax: '15px',
+      yparallax: '15px',
+      xorigin: 0,
+      yorigin: 0
+    });
 
   $(document).on('click','.select', function(e){
     $(this).toggleClass('select--opened');

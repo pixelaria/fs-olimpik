@@ -550,6 +550,8 @@ h1,h2 {
   
   &__row {
     display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
   }
 
   &__title {
@@ -870,6 +872,7 @@ h1,h2 {
     text-align: left;
     word-wrap: break-word;
     
+
     @media @tablet {
       font-size: 16px;
       line-height: 21px;
@@ -2223,13 +2226,41 @@ h1,h2 {
 
 /* FRANCHISE */
 
+.link {
+  &--center {
+    display: block;
+    color: #ffffff;
+    
+    text-decoration: underline;
+    text-align: center;
+    font-style: 18px;
+    font-weight: 400;
+    transition: color 0.3s ease;
+    &:hover {
+      color: #e1002b;
+    }
+  }
+}
+.franchise {
+  .section__title {
+    font-size: 24px;
+    font-weight: 200;
+    line-height: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+  }
+}
 
 
 .facts {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-
+  
+  @media @mobiles {
+    display: block;
+  }
   &__item {
     position: relative;
     color: #ffffff;
@@ -2239,11 +2270,65 @@ h1,h2 {
     padding-left: 75px;
 
     width: 33%;
+    max-width: 340px;
     margin-bottom: 25px;
 
     &:before {
       content: '';
       position: absolute;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 56px;
+      height: 56px;
+      left: 0;
+    }
+
+    &--proud {
+      padding-left: 90px;
+      
+      &:before {
+        width: 70px;
+        height: 70px;
+
+      }
+
+      &:nth-child(1):before {
+        background-image: url('../img/icon-facts-proud-1.png');
+      }
+      &:nth-child(2):before {
+        background-image: url('../img/icon-facts-proud-2.png');
+      }
+      &:nth-child(3):before {
+        background-image: url('../img/icon-facts-proud-3.png');
+      }
+    }
+    &--whistle:before {
+      background-image: url('../img/icon-facts-whistle.png');
+    }
+    &--docs:before {
+      background-image: url('../img/icon-facts-docs.png');
+    }
+    &--flag:before {
+      background-image: url('../img/icon-facts-flag.png');
+    }
+    &--check:before {
+      background-image: url('../img/icon-facts-check.png');
+    }
+    &--bird:before {
+      background-image: url('../img/icon-facts-bird.png');
+    }
+    &--calc:before {
+      background-image: url('../img/icon-facts-calc.png');
+    }
+    &--manager:before {
+      background-image: url('../img/icon-facts-manager.png');
+    }
+    &--clock:before {
+      background-image: url('../img/icon-facts-clock.png');
+    }
+    &--boxes:before {
+      background-image: url('../img/icon-facts-boxes.png');
     }
   }
 }
@@ -2286,13 +2371,19 @@ h1,h2 {
 .content {
   &__item {
     position: relative;
+
+    display: flex;
+    align-items: center;
+
+    min-height: 45px;
+    margin-bottom: 15px;
+    padding-left: 70px;
+
     color: #515151;
     font-size: 18px;
     font-weight: 400;
     line-height: 32px;
-    margin-bottom: 15px;
-
-    padding-left: 40px;
+    
     span {
       font-weight: 600;
     }
@@ -2300,68 +2391,153 @@ h1,h2 {
     &:before {
       content: '';
       position: absolute;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 40px;
+      height: 40px;
+      left: 0;
+      top: 5px;
+    }
+
+    &--start:before {
+      background-image: url('../img/icon-content-start.png');
+    }
+    &--book:before {
+      background-image: url('../img/icon-content-book.png');
+    }
+    &--method:before {
+      background-image: url('../img/icon-content-method.png');
+    }
+    &--call:before {
+      background-image: url('../img/icon-content-call.png');
+    }
+    &--smm:before {
+      background-image: url('../img/icon-content-smm.png');
+    }
+    &--brand:before {
+      background-image: url('../img/icon-content-brand.png');
+    }
+    &--consult:before {
+      background-image: url('../img/icon-content-consult.png');
     }
   }
 }
 
 .section {
+  &--promo-page {
+    padding-top: 90px;
+    padding-bottom: 200px;
+    position: relative;
+
+    .container {
+      z-index: 4;
+    }
+  }
+  &--red {
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 90px;
+    background-color: #bc0e22;
+    .container {
+      z-index: 4;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      top: 100px;
+      width: 100%;
+      height: 200px;
+      //background-color: #bc0e22;
+      background-color: #ffffff;
+      transform:skewY(-8deg) translateY(-400px);
+      transform-origin: 100%;
+      top: 0;
+      z-index: 2;
+    }
+
+    &:after {
+      content: '';
+      width: 100%;
+      height: 200px;
+
+      position: absolute;
+      top: 0;
+      background-color: #bc0e22;
+      
+      transform:skewY(-8deg) translateY(-200px);
+      
+      transform-origin: 100%;
+      z-index: 3;
+
+    }
+    
+    
+  }
 
   &--feedback {
     padding-top: 100px;
-    padding-bottom: 200px;
-  }
-  &--facts {
+    padding-bottom: 250px;
     position: relative;
-    
-    padding-bottom: 100px;
-    background-color: #00000a;
-
+    overflow:hidden;
     &:before {
       content: '';
       width: 100%;
-      height: 300px;
+      height: 100%;
       position: absolute;
-      top: 0;
+      bottom: -100%;
 
       background-color: #00000a;
 
-      transform:skewY(-10deg) translateY(-140px);
+      transform:skewY(-8deg);
+      transform-origin: 0;
       z-index: -1;
-
+        
     }
     &:after {
       content: '';
       width: 100%;
-      height: 300px;
+      height: 130px;
       position: absolute;
-      top: 0;
+      bottom:0;
 
       background-color: #bc0e22;
 
-      transform:skewY(10deg);
+      transform:skewY(8deg);
+      transform-origin: 0;
       z-index: -2;
 
     }
   }
 
-  &--red {
+  &--facts {
     position: relative;
-    background-color: #bc0e22;
+    padding-bottom: 100px;
+    background-color: #00000a;
+
+  }
+
+  
+
+  &--content {
+    position: relative;
+    padding-top: 60px;
+    padding-bottom: 60px;
     
-    padding: 0 0 90px 0;
     &:before {
       content: '';
       width: 100%;
-      height: 300px;
+      height: 200px;
       position: absolute;
-      top: -140px;
-      background-color: #bc0e22;
+      top: -200px;
+      background-color: #00000a;
 
-      transform:skewY(-10deg);
+      transform:skewY(-8deg);
       z-index: -1;
 
     }
   }
+
   &--manager {
     position: relative;
     overflow: hidden;
@@ -2370,38 +2546,89 @@ h1,h2 {
     &:before {
       content: '';
       width: 100%;
-      height: 300px;
+      height: 200px;
       position: absolute;
       top: 0;
 
       background-color: #000000;
 
-      transform:skewY(-10deg) translateY(-150px);
+      transform:skewY(-8deg);
+      transform-origin: 0;
       z-index: -1;
 
     }
     &:after {
       content: '';
       width: 100%;
-      height: 300px;
+      height: 200px;
       position: absolute;
       top: 0;
 
       background-color: #bc0e22;
 
-      transform:skewY(10deg) translateY(-150px);
+      transform:skewY(8deg);
+      transform-origin: 100% 0;
       z-index: -2;
 
     }
   }
 
   &--black {
+    padding: 60px 0;
     background-color: #00000a;
   }
+
+  &--conditions {
+    padding-top: 80px;
+    padding-bottom: 100px;
+    overflow: hidden;
+
+    position: relative;
+    &:before {
+      content: '';
+      width: 100%;
+      height: 55px;
+      
+      position: absolute;
+      bottom: 0;
+
+      background-color: #bc0e22;
+
+      transform:skewY(8deg);
+      transform-origin: 0;
+      z-index: -1;
+
+    }
+  }
+
   &__title {
-    &--claws {
+    &--claws-white {
+      padding-left: 160px;
+      position: relative;
+      height: 140px;
+      display: flex;
+      align-items: center;
+    
+      &:after {
+        content: '';
+        position: absolute;
+        width: 140px;
+        height: 140px;
+        left: 0;
+        top: 0;
+        background-image: url('../img/claws-white.png');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+    &--claws-red {
       padding-right: 160px;
       position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: right;
+      height: 140px;
 
       &:after {
         content: '';
@@ -2410,7 +2637,7 @@ h1,h2 {
         height: 140px;
         right: 0;
         top: 0;
-        background-image: url('../img/claws.png');
+        background-image: url('../img/claws-red.png');
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
@@ -2419,7 +2646,6 @@ h1,h2 {
   }
   
   &__subtitle {
-
     font-size: 24px;
     font-weight: 700;
     line-height: 18px;
@@ -2428,16 +2654,21 @@ h1,h2 {
     &--white {
       color: #ffffff;
     }
-
   }
-  &__text {
   
+  &__text {
     font-size: 18px;
     font-weight: 400;
     line-height: 32px;
-
+    margin-bottom: 15px;
+    
     &--white {
       color: #ffffff;
+    }
+
+    &--center {
+      text-align: center;
+      margin-bottom: 60px;
     }
   }
 }
@@ -2515,5 +2746,89 @@ h1,h2 {
 
   &__author {
     font-weight: 600;
+  }
+}
+
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  &__row {
+    &:last-child {
+      .table__cell {
+        background-color: #e90000;
+        color: #ffffff;
+        border-color: #e90000;
+      }
+    }
+  }
+
+  &__cell {
+    padding: 40px 30px;
+    text-align: center;
+    border: 1px solid #00000a;
+    &:first-child {
+      background-color: #00000a;
+      color:#ffffff;
+      text-align: left;
+    }
+  }
+}
+
+
+.promo-page {
+  
+  &__title {
+    font-family: "Code-Pro";
+    color: #000000;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 58px;
+    text-transform: uppercase;
+    max-width: 780px;
+    margin-bottom: 25px;
+  }
+  &__desc {
+
+  }
+  
+  &__childs  {
+    position: relative;
+    
+    font-size: 0;
+    position: absolute;
+    right: 0;
+    bottom: 100px;
+    width: 600px;
+    z-index: 3;
+    overflow: hidden;
+    img {
+      display: block;
+      transform: scale(1.1);
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 100px;
+      width: 100%;
+      height: 100px;
+      //background-color: #bc0e22;
+      background-color: #ffffff;
+      transform:skewY(-8deg);
+      transform-origin: 0;
+      top: 0;
+      z-index: 2;
+    }
+  }
+  &__parallax {
+    position: absolute;
+    width: 550px;
+    height: 350px;
+    overflow: unset;
+    right: 100px;
+    bottom: 150px;
+    z-index: 4;
+
   }
 }

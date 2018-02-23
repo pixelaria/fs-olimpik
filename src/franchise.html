@@ -35,13 +35,11 @@
       </div>
       <nav id="nav" class="header__item header__item--nav nav">
         <ul class="nav__list">
-          <li class="nav__item"><a href="#section-about" class="nav__link scroll-to-target">О школе</a></li>
-          <li class="nav__item"><a href="#section-photos" class="nav__link scroll-to-target">Фото</a></li>
-          <li class="nav__item"><a href="#trainers" class="nav__link scroll-to-target">Наши тренеры</a></li>
-          <li class="nav__item"><a href="#prices" class="nav__link scroll-to-target">Цены</a></li>
-          <li class="nav__item"><a href="#reviews" class="nav__link scroll-to-target">Отзывы</a></li>
-          <li class="nav__item"><a href="#address" class="nav__link scroll-to-target">Адреса</a></li>
-          <li class="nav__item"><a href="#" class="nav__link nav__link--red">Франшиза</a></li>
+          <li class="nav__item"><a href="#about" class="nav__link scroll-to-target">О школе</a></li>
+          <li class="nav__item"><a href="#facts" data-offset="50" class="nav__link scroll-to-target">Преимущества</a></li>
+          <li class="nav__item"><a href="#content" data-offset="50" class="nav__link scroll-to-target">Состав франшизы</a></li>
+          <li class="nav__item"><a href="#conditions" data-offset="50" class="nav__link scroll-to-target">Стоимость</a></li>
+          <li class="nav__item"><a href="#feedback" data-offset="50" class="nav__link nav__link--red scroll-to-target">Родителям</a></li>
         </ul>
       </nav>
       <div class="header__item header__item--phone">
@@ -50,30 +48,39 @@
     </div> 
   </header>
   <main class="main">
-    <section class="section">
+    <section class="section section--promo-page">
+      <div class="promo-page__parallax parallax-viewport" style="">
+        <img src="./img/promo-boys.png" alt="" class="img--responsive parallax-layer">  
+        <img src="./img/promo-boys-2.png" alt="" class="img--responsive parallax-layer">  
+        <img src="./img/promo-boys-3.png" alt="" class="img--responsive parallax-layer">  
+      </div>
+      <div class="promo-page__childs">
+        <img src="./img/photos/photos-2.jpg" alt="" class="img--responsive">  
+      </div>
+      
       <div class="container">
-        <div class="page">
-          <h1 class="page__title">
+        <div class="promo-page">
+          <h1 class="promo-page__title">
             Открой футбольную школу для детей с доходностью от 960000 рублей в год
           </h1>
-          <div class="page__parallax">
-            <img src="./img/frahchise.png" alt="" class="img--responsive">
-          </div>
-          <div class="page__desc">
+          <div class="promo-page__desc">
             <ul class="list list--text">
               <li class="list__item"><span>Низкие начальные инвестиции</span> от 315 тыс. рублей</li>
               <li class="list__item"><span>21 день до открытия</span> и 7 месяцев до полной окупаемости</li>
               <li class="list__item"><span>Стабильная прибыль</span> от 80 000 руб. с первого месяца</li>
             </ul>
-            <a href="#" class="btn btn--red">Получить презентацию франшизы</a>
+            <a href="#" class="btn btn--red">Получить презентацию франшизы</a><br>
             <a href="#" class="link">Проконсультироваться с собственниками</a>
+          </div>
+          <div class="promo-page__parallax">
+            
           </div>
         </div>
       </div>
     </section>
-    <section class="section section--red">
+    <section class="section section--red" id="about">
       <div class="container">
-        <h2 class="section__title section__title--white">Школа футбола для детей дошкольного возраста</h2>
+        <h2 class="section__title section__title--center section__title--white">Школа футбола для детей дошкольного возраста</h2>
         <div class="section__row">
         <div class="col-6">
           <div class="swiper--small swiper-container">
@@ -98,11 +105,15 @@
           <p class="section__text section__text--white">Тренировки проходят в веселой игровой форме по наиболее современным методикам обучения, разработанных специально для детей дошкольного возраста, интересных и безопасных для малышей.</p>  
         </div>
         </div>
-        
-        
+        <div class="facts">
+          <div class="facts__item facts__item--proud">Современные, детально описанные  методики по обучению детей</div>
+          <div class="facts__item facts__item--proud">Расписание легко регулируется, занятость от 2-х часов в неделю</div>
+          <div class="facts__item facts__item--proud">Бизнес в счастливой атмосфере довольных учеников и их родителей </div>
+        </div>  
+          
       </div>
     </section>
-    <section class="section section--feedback">
+    <section class="section section--feedback" id="feedback">
       <div class="container">
         <div class="feedback">
           <div class="feedback__photo">
@@ -145,13 +156,16 @@
         </div>
       </div>
     </section>
-    <section class="section section--facts">
+    <section class="section section--facts" id="facts">
       <div class="container">
-        <h2 class="section__title section__title--white">Почему стоит выбрать франшизу Олимпик в 2018 году?</h2>
+        <h2 class="section__title section__title--white section__title--claws-white">Почему стоит выбрать франшизу Олимпик в 2018 году?</h2>
         <div class="section__row">
-          <p class="section__text section__text--white">
+          <p class="section__text section__text--white col-md-7">
             Детские школа футбола — привлекательный бизнес, который уже имеет свою целевую аудиторию среди активных родителей, быстро развивается и всегда останется актуальным. В 2018 году у нас пройдет чемпионат мира по футболу, и поэтому это наиболее удачный год для открытия своей футбольной школы. 
           </p>
+          <div class="col-md-4">
+            <p class="section__text section__text--white">Проверьте, свободен ли ваш город</p>
+          </div>
         </div>
         <div class="facts">
           <div class="facts__item facts__item--whistle">Авторская методика от одного из лучших детских тренеров России</div>
@@ -166,41 +180,84 @@
         </div>
       </div>
     </section>
-    <section class="section">
+    <section class="section section--content" id="content">
       <div class="container">
-        <h2 class="section__title section__title--right">Состав франшизы Олимпик</h2>
+        <h2 class="section__title section__title--right section__title--claws-red">Состав франшизы Олимпик</h2>
         <div class="content">
-          <div class="content__item">
-            <span>Старт-бук.</span> Подробные инструкции по регистрации бизнеса, подбору помещения, найму и обучению персонала, запуску рекламной компании
+          <div class="content__item content__item--start">
+            <div class="content__inner">
+              <span>Старт-бук.</span> Подробные инструкции по регистрации бизнеса, подбору помещения, найму и обучению персонала, запуску рекламной компании
+            </div>
           </div>
-          <div class="content__item">
-            <span>Франчайзи-бук.</span> Детальное руководство по ведению бизнеса, описание каждого бизнес-процесса – от маркетинга до закупки инвентаря
+          <div class="content__item content__item--book">
+            <div class="content__inner">
+              <span>Франчайзи-бук.</span> Детальное руководство по ведению бизнеса, описание каждого бизнес-процесса – от маркетинга до закупки инвентаря
+            </div>
           </div>
-          <div class="content__item">
-            <span>Методики тренировок</span> Тренировочные программы, регулярные вебинары и консультации от одного из лучших детских футбольных тренеров России
+          <div class="content__item content__item--method">
+            <div class="content__inner">
+              <span>Методики тренировок</span> Тренировочные программы, регулярные вебинары и консультации от одного из лучших детских футбольных тренеров России
+            </div>
           </div>
-          <div class="content__item">
-            <span>Единый колл-центр.</span> Мы подключим вас к федеральному колл-центру 8-800, разместим ваш филиал на сайте «Олимпик»
+          <div class="content__item content__item--call">
+            <div class="content__inner">
+              <span>Единый колл-центр.</span> Мы подключим вас к федеральному колл-центру 8-800, разместим ваш филиал на сайте «Олимпик»
+            </div>
           </div>
-          <div class="content__item">
-            <span>SMM и маркетинг.</span> Передадим стандарты работ в соц. сетях, создадим и наполним для вас группу в ВК, поможем найти первых клиентов.
+          <div class="content__item content__item--smm">
+            <div class="content__inner">
+              <span>SMM и маркетинг.</span> Передадим стандарты работ в соц. сетях, создадим и наполним для вас группу в ВК, поможем найти первых клиентов.
+            </div>
           </div>
-          <div class="content__item">
-            <span>Бренд-бук</span> и шаблоны всех рекламных материалов.
+          <div class="content__item content__item--brand">
+            <div class="content__inner">
+              <span>Бренд-бук</span> и шаблоны всех рекламных материалов.
+            </div>
           </div>
-          <div class="content__item">
-            <span>Обучение и консультации.</span> Проведём обучение франчайзи и персонала, будем поддерживать на всех этапах работы
+          <div class="content__item content__item--consult">
+            <div class="content__inner">
+              <span>Обучение и консультации.</span> Проведём обучение франчайзи и персонала, будем поддерживать на всех этапах работы
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="section">
+    <section class="section section--black">
       <div class="container">
-        <a href="#" class="link link--white">Скачать презентацию с полным составом  франшизы  </a>
+        <a href="#" class="link link--center">Скачать презентацию с полным составом  франшизы  </a>
       </div>
     </section>
-    <section class="section">
-      <div class="conainer">
+    <section class="section section--conditions" id="conditions">
+      <div class="container">
+        <h2 class="section__title">Условия и стоимость франшизы </h2>
+        <table class="table">
+          <tr class="table__row">
+            <td class="table__cell">Город</td>
+            <td class="table__cell">Москва</td>
+            <td class="table__cell">Санкт-Петербург</td>
+            <td class="table__cell">Другой</td>
+          </tr>
+          <tr class="table__row">
+            <td class="table__cell">Паушальный взнос</td>
+            <td class="table__cell">500 000</td>
+            <td class="table__cell">400 000</td>
+            <td class="table__cell">от 200 000</td>
+          </tr>
+          <tr class="table__row">
+            <td class="table__cell">Роялти</td>
+            <td class="table__cell">20 000</td>
+            <td class="table__cell">15 000</td>
+            <td class="table__cell">10 000</td>
+          </tr>
+          <tr class="table__row">
+            <td class="table__cell">Первоначальные инвестиции</td>
+            <td class="table__cell" colspan="3">115 000</td>
+          </tr>
+          <tr class="table__row">
+            <td class="table__cell"></td>
+            <td class="table__cell" colspan="3"><a href="#" class="link link--white">Получить расчет сметы, прибыли, окупаемости и расходов</a></td>
+          </tr>
+        </table>
         <div class="table">
           <div class="table__body">
             
@@ -211,8 +268,8 @@
     </section>
     <section class="section section--manager">
       <div class="container">
-        <h2 class="section__title">Доведем вас до результата</h2>
-        <p class="section__subtitle">Мы открыли уже 9 филиалов и, в отличие от любого менеджера, точно знаем, что ждет вас на каждом этапе</p>
+        <h2 class="section__title section__title--center">Доведем вас до результата</h2>
+        <p class="section__text section__text--center">Мы открыли уже 9 филиалов и, в отличие от любого менеджера, точно знаем, что ждет вас на каждом этапе</p>
         <div class="section__row">
           <div class="manager">
             <div class="manager__photo">
@@ -224,7 +281,7 @@
           </div>
           <div class="manager">
             <div class="manager__photo">
-              <img src="./img/manager-1.png" alt="" class="img img--responsive">
+              <img src="./img/manager-2.png" alt="" class="img img--responsive">
             </div>
             <div class="manager__name">Алексей Бодряков</div>
             <div class="manager__position">Основатель и учредитель</div>
