@@ -144,6 +144,11 @@ $(function (){
       yorigin: 0
     });
 
+  $('.map__boys .parallax-layer').parallax(
+    {mouseport: $("body"),xorigin: 0,yorigin: 0},
+    {xparallax: '15px', yparallax: '15px'},{xparallax: '30px',yparallax: '30px'},{xparallax: '50px',yparallax: '50px'}
+  );
+
   $(document).on('click','.select', function(e){
     $(this).toggleClass('select--opened');
     return false;
