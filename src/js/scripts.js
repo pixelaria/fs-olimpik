@@ -202,23 +202,22 @@ $(function (){
       }
     }
   });
+
   var swiper_small = new Swiper('.swiper--small', {
     effect: 'coverflow',
     loop: true,
     centeredSlides: true,
-    slidesPerView: 2,
+    slidesPerView:1.2,
     initialSlide: 1,
     
     navigation: {
-      nextEl: '.swiper--photos .swiper-button-next',
-      prevEl: '.swiper--photos .swiper-button-prev',
+      nextEl: '.swiper--small .swiper-button-next',
+      prevEl: '.swiper--small .swiper-button-prev',
     },
     coverflowEffect: {
       rotate: 0,
       slideShadows: false,
-      stretch: 0,
-      depth: 100,
-      modifier:2
+      
     },
 
   });

@@ -69,8 +69,11 @@
               <li class="list__item"><span>21 день до открытия</span> и 7 месяцев до полной окупаемости</li>
               <li class="list__item"><span>Стабильная прибыль</span> от 80 000 руб. с первого месяца</li>
             </ul>
-            <a href="#" class="btn btn--red">Получить презентацию франшизы</a><br>
-            <a href="#" class="link">Проконсультироваться с собственниками</a>
+            <div class="promo-page__links">
+                <a href="#" class="btn btn--red">Получить презентацию франшизы</a>
+                <a href="#" class="link link--small">Проконсультироваться с собственниками</a>  
+            </div>
+            
           </div>
           <div class="promo-page__parallax">
             
@@ -163,8 +166,24 @@
           <p class="section__text section__text--white col-md-7">
             Детские школа футбола — привлекательный бизнес, который уже имеет свою целевую аудиторию среди активных родителей, быстро развивается и всегда останется актуальным. В 2018 году у нас пройдет чемпионат мира по футболу, и поэтому это наиболее удачный год для открытия своей футбольной школы. 
           </p>
-          <div class="col-md-4">
+          <div class="col-md-5">
             <p class="section__text section__text--white">Проверьте, свободен ли ваш город</p>
+            <div class="checker">
+              <div class="checker__select">
+                <div class="select select--checker">
+                  <input class="select__input" name="city" value="Санкт-Петербург" type="hidden">
+                  <div class="select__placeholder">Санкт-Петербург</div>
+                  <div class="select__inner">
+                    <div class="select__item" data-text="Санкт-Петербург" data-value="Санкт-Петербург">Санкт-Петербург</div>
+                    <div class="select__item" data-text="Санкт-Петербург" data-value="Санкт-Петербург">Москва</div>
+                    <div class="select__item" data-text="Санкт-Петербург" data-value="Санкт-Петербург">Ростов-на-Дону</div>
+                  </div>
+                </div>
+              </div>
+              <div class="checker__btn">
+                <div class="btn btn--red">Проверить</div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="facts">
@@ -303,12 +322,39 @@
         </div>
       </div>
     </section>
-    <section class="section">
+    <section class="section section--map">
       <div id="map" class="map"></div>
+      
+      <div class="container map__boys">
+        <div class="map__boy">
+          <img src="./img/map-boys-1.png" alt="" class="img img--responsive">
+        </div>
+        <div class="map__boy">
+          <img src="./img/map-boys-2.png" alt="" class="img img--responsive">
+        </div>
+        <div class="map__boy">
+          <img src="./img/map-boys-3.png" alt="" class="img img--responsive">
+        </div>
+        <div class="map__boy">
+          <img src="./img/map-boys-4.png" alt="" class="img img--responsive">
+        </div>
+        <div class="map__boy">
+          <img src="./img/map-boys-5.png" alt="" class="img img--responsive">
+        </div>
+        <div class="map__boy">
+          <img src="./img/map-boys-6.png" alt="" class="img img--responsive">
+        </div>
+      </div>
+      
+      
     </section>
   </main>
   <footer class="footer footer--black">
+    <div class="footer__claws">
+      <img src="./img/claws-red-big.png" alt="" class="img img--responsive">
+    </div>
     <div class="container">
+      <div class="footer__text">Франшиза детской футбольной школы «Олимпик»</div>
       <ul class="list list--footer">
         <li class="list__item">
           <a href="tel:88126027440" class="link link--white">8 (812) 602-74-40</a>
@@ -319,7 +365,7 @@
       </ul>
       <ul class="list list--footer">
         <li class="list__item">2018 Копирование материалов с сайта запрещено</li>
-        <li class="list__item">Разработано в Pixelaria</li>
+        <li class="list__item">Разработано в <a href="#" class="link link--red">Pixelaria</a></li>
       
       
     </div>
