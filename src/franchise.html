@@ -12,6 +12,19 @@
   <link rel="stylesheet" href="./css/bundle.css">
 </head>
 <body class="franchise">
+  <section class="overlay" id="callback">
+    <form class="form form--popup" action="" name="form-1">
+      <div class="overlay__close overlay__close--form"></div>
+      <div class="form__title">ОСТАВЬТЕ ВАШ ТЕЛЕФОН</div>
+      <div class="form__subtitle">и мы перезвоним ВАМ в самое ближайшее время</div>
+      <div class="form__fields">
+        <input type="text" class="form__input" name="name" placeholder="введите ваше имя">
+        <input type="text" class="form__input im--phone" name="tell" placeholder="введите ваш телефон">
+        <input class="feedback btn btn--form btn--red" name="send" type="button" value="Заказать звонок">
+      </div>
+    </form>
+  </section>
+
   <div class="strip">
     <div class="container strip__container">
       <div class="strip__item">
@@ -125,10 +138,10 @@
           </div>
           <div class="feedback__desc">
             <p class="feedback__text">
-              Все тренера очень хорошие и умеют общаться с детьми. Ни один ребёнок без внимания не остаётся! Вся тренировка проходит в игре и при полном внимании тренеров. Очень довольна школой!!! Спасибо вам за ваш профессионализм!!! Надеюсь мы надолго!!! Димка от вас без ума))))
+              Начали заниматься в конце августа в филиале на Приморском у тренеры Романа. Начали с нуля, хотя уже 7 лет почти. Удачно, что попали в новую команду, а не давно сыгранную, легче было адаптироваться. На тренировки ребенок идет с удовольствием, видно, что глаза горят. Это самое главное на данный момент. А дальше будем смотреть:)
             </p>
             <p class="feedback__author">
-              Татьяна Шило, мама Максима (пример)              
+              Наталья Федотова <a class="link link--small" href="https://vk.com/id616470" target="_blank">(Вконтакте)</a>           
             </p>
           </div>
         </div>
@@ -141,7 +154,7 @@
               Все тренера очень хорошие и умеют общаться с детьми. Ни один ребёнок без внимания не остаётся! Вся тренировка проходит в игре и при полном внимании тренеров. Очень довольна школой!!! Спасибо вам за ваш профессионализм!!! Надеюсь мы надолго!!! Димка от вас без ума))))
             </p>
             <p class="feedback__author">
-              Татьяна Шило, мама Максима (пример)              
+              Ирина Петкун, мать Димы <a class="link link--small" href="https://vk.com/id2224502" target="_blank">(Вконтакте)</a>
             </p>
           </div>
         </div>
@@ -151,10 +164,10 @@
           </div>
           <div class="feedback__desc">
             <p class="feedback__text">
-              Все тренера очень хорошие и умеют общаться с детьми. Ни один ребёнок без внимания не остаётся! Вся тренировка проходит в игре и при полном внимании тренеров. Очень довольна школой!!! Спасибо вам за ваш профессионализм!!! Надеюсь мы надолго!!! Димка от вас без ума))))
+              Ходим на тренировки в кировском районе (стачек 45, к2) Тренировки проходят в игровой форме, наш Максим (3 года) очень любит играть со всеми в футбол, а после тренировок даже стал папе показывать как правильно обращаться с мячом)) Спасибо огромное, что есть такая школа, где юных любителей футбола не только обучают этой игре, но и учат дисциплине. Хотела бы отметить очень профессиональный подход тренеров к футболистам:)
             </p>
             <p class="feedback__author">
-              Татьяна Шило, мама Максима (пример)              
+              Татьяна Шило, мама Максима <a class="link link--small" href="https://vk.com/id140085271" target="_blank">(Вконтакте)</a>              
             </p>
           </div>
         </div>
@@ -252,19 +265,19 @@
           </tr>
           <tr class="table__row">
             <td class="table__cell">Паушальный взнос</td>
-            <td class="table__cell">500 000</td>
-            <td class="table__cell">400 000</td>
-            <td class="table__cell"><span>от </span>200 000</td>
+            <td class="table__cell">500 000 р.</td>
+            <td class="table__cell">400 000 р. </td>
+            <td class="table__cell"><span>от </span>200 000 р.</td>
           </tr>
           <tr class="table__row">
             <td class="table__cell">Роялти</td>
-            <td class="table__cell">20 000</td>
-            <td class="table__cell">15 000</td>
-            <td class="table__cell">10 000</td>
+            <td class="table__cell">20 000 р.</td>
+            <td class="table__cell">15 000 р.</td>
+            <td class="table__cell">10 000 р.</td>
           </tr>
           <tr class="table__row">
             <td class="table__cell">Первоначальные инвестиции</td>
-            <td class="table__cell" colspan="3">115 000</td>
+            <td class="table__cell" colspan="3">115 000 р.</td>
           </tr>
           <tr class="table__row">
             <td class="table__cell"></td>
@@ -305,7 +318,7 @@
     </section>
     <section class="section section--black">
       <div class="container">
-        <div class="inline-form">
+        <form class="inline-form">
           <div class="inline-form__info">
             <h2 class="inline-form__title">Остались вопросы?</h2>
             <p class="inline-form__subtitle">Собственники бизнеса будут рады проконсультировать вас</p>
@@ -314,7 +327,7 @@
             <input type="text" class="form__input" placeholder="Имя"><input type="text" class="form__input" placeholder="Телефон">
             <a href="#" class="btn btn--red">Отправить</a>
           </div>
-        </div>
+        </form>
       </div>
     </section>
     <section class="section section--map">

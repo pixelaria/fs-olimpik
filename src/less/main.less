@@ -2326,6 +2326,15 @@ h1,h2 {
     line-height: 45px;
   }
 
+  .btn--form {
+    height: 75px;
+    line-height: 75px;
+    @media @mobiles {
+      height: 45px;
+      line-height: 45px;
+    }
+  }
+
 }
 
 
@@ -2955,7 +2964,8 @@ h1,h2 {
       position: relative;
       display: flex;
       align-items: center;
-      justify-content: right;
+      justify-content: flex-end;
+
       height: 140px;
 
       &:after {
@@ -3205,9 +3215,9 @@ h1,h2 {
   }
 
   &__photo {
-    width: 140px;
+    width: 196px;
     height: 140px;
-    min-width: 140px;
+    min-width: 196px;
     margin-right: 40px;
     border-radius: 20px;
     overflow: hidden; 
@@ -3218,10 +3228,11 @@ h1,h2 {
     }
 
     @media @mobiles {
-      min-width: 60px;
-      width: 60px;
+      min-width: 90px;
+      width: 90px;
       height: 60px;
       margin-right: 15px;
+      border-radius: 10px;
     }
 
     
