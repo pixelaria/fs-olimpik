@@ -753,6 +753,8 @@ h1,h2 {
     color:#ffffff;
     
     transition: background-color 0.3s ease;
+    border:none;
+
     &:hover {
       background-color:darken(#ff0000,10%);
     }
@@ -781,24 +783,18 @@ h1,h2 {
   &--form {
     height: 75px;
     width: 100%;
-
-
     border-radius: 40px;
-    
     color: #ffffff;
     font-family: "Acrom";
-    font-size: 33px;
+    font-size: 28px;
     font-weight: 700;
     line-height: 75px;
     text-align: center;
     text-transform: uppercase;
-
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
+    border:none;
   }
   
-  &--popup {
-
-  }
   @media @mobiles {
     padding: 0 10px;
     font-size: 14px;
@@ -1509,7 +1505,6 @@ h1,h2 {
         color:#ffffff;
       } 
     }
-
   }
   &__title {
     font-family: Acrom;
@@ -1526,13 +1521,17 @@ h1,h2 {
   &__subtitle {
     color: #ffffff;
 
-    margin-bottom: 30px;
+    margin-bottom: 0;
 
     text-align: center;
     text-transform: uppercase;
 
     font-size: 18px;
     line-height: 22px;
+  }
+
+  &__fields {
+    margin-top: 30px;
   }
   &__input {
     display: block;
@@ -3204,8 +3203,11 @@ h1,h2 {
 
 }
 
-
 .feedback {
+  text-align: center;
+}
+
+.feedbacks {
   
   display: flex;
   margin-bottom: 30px;

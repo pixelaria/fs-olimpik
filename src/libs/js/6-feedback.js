@@ -28,7 +28,7 @@ function myconf() {
     var cf = $.Deferred();
         $.ajax({
             type: 'POST',
-            url: 'feedback/',
+            url: '/feedback/',
             dataType: 'json',
             data: 'act=cfg',
             success: function(answer) {
@@ -43,18 +43,18 @@ var mcf = myconf();
 mcf.done(function(conf) {
 
 $(document).ready(function() {
-(function() {
-           var fb = $('.feedback');
-           if(fb.length > 0) {
-                fb.each(function(){
-                    var form = $(this).closest('form'), name = form.attr('name');
-                    //console.log(form);
-                    if(isset(conf[name]) && isset(conf[name].cfg.antispamjs)) {
-                      $(form).prepend('<input type="text" name="'+ conf[name].cfg.antispamjs +'" value="tesby" style="display:none;">');
-                    }
-                });
-            }
-  })();
+    (function() {
+       var fb = $('.feedback');
+       if(fb.length > 0) {
+            fb.each(function(){
+                var form = $(this).closest('form'), name = form.attr('name');
+                //console.log(form);
+                if(isset(conf[name]) && isset(conf[name].cfg.antispamjs)) {
+                  $(form).prepend('<input type="text" name="'+ conf[name].cfg.antispamjs +'" value="tesby" style="display:none;">');
+                }
+            });
+        }
+    })();
 });
 
 
@@ -71,7 +71,7 @@ function feedback(vars) {
 
     $.ajax({
         type: 'POST',
-        url: 'feedback/',
+        url: '/feedback/',
         cache: false,
         dataType: 'json',
         data: 'act=' + vars.act + '&' + vars.data,
@@ -154,7 +154,7 @@ function feedback(vars) {
  */
 
 $(document).on('click', '.feedback', function(){
-   var form = $(this).closest('form'), name = form.attr('name'), obj = {};
+    var form = $(this).closest('form'), name = form.attr('name'), obj = {};
        obj.form = form;
        obj.act = name;
        obj.data = $(form).serialize();
