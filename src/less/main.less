@@ -786,7 +786,7 @@ h1,h2 {
     border-radius: 40px;
     color: #ffffff;
     font-family: "Acrom";
-    font-size: 28px;
+    font-size: 22px;
     font-weight: 700;
     line-height: 75px;
     text-align: center;
@@ -3452,7 +3452,9 @@ h1,h2 {
     z-index: 4;
 
     
-
+    @media @mobiles {
+      display: none;
+    }
     @media @desktop-xl {
       width: 500px;
       height: 350px;
